@@ -26,7 +26,7 @@
 
 	h1 {
 		color: #444;
-		background-color: transparent;
+		background-color: black;
 		border-bottom: 1px solid #D0D0D0;
 		font-size: 19px;
 		font-weight: normal;
@@ -59,8 +59,8 @@
 	}
 	
 	#container{
-		margin: 10px;
-		border: 1px solid #D0D0D0;
+		margin: 20px;
+		border: 1px  #D0D0D0;
 		-webkit-box-shadow: 0 0 8px #D0D0D0;
 	}
 	</style>
