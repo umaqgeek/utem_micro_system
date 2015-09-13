@@ -11,7 +11,8 @@
 	::webkit-selection{ background-color: #E13300; color: white; }
 
 	body {
-		background-color: #000;
+
+		background-color: #f00;
 		margin: 40px;
 		font: 13px/20px normal Helvetica, Arial, sans-serif;
 		color: #f0f;
