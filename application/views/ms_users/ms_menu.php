@@ -11,7 +11,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="<?=site_url('users'); ?>">Home Page</a>
+                <a class="navbar-brand topnav" href="<?=site_url('ms_users'); ?>">Home Page</a>
+        
+                        <a class="navbar-brand topnav" href="<?=site_url('ms_users/inventory'); ?>">Inventory</a>
+                 
+                        
+                        <a class="navbar-brand topnav" href="<?=site_url('ms_users/sales'); ?>">Sales</a>
+                        
+                   
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -19,6 +26,7 @@
 <!--                    <li>
                         <a href="#about">About</a>
                     </li>-->
+
                     <li>
                         <a href="<?=site_url('ms_login/logout'); ?>">Logout</a>
                     </li>

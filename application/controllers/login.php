@@ -2,7 +2,7 @@
 
 class Login extends CI_Controller 
 {
-        var $parent_page = "login";
+    var $parent_page = "login";
 	function __construct()
 	{
             parent::__construct(); 

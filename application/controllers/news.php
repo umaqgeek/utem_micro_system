@@ -1,0 +1,11 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+class News extends CI_Controller {
+public function show($id) {
+   	$this->load->model('news_model');
+    $news = $this->news_model->get_news($id);
+    $data['title'] = $news['title'];
+    $data['body'] = $news['body'];
+    $this->load->view('news_article', $data);
+}
+}
+?>

@@ -364,13 +364,13 @@ class SimpleLoginSecure
 
 
 		//Check if already logged in
-		if($this->CI->session->userdata('u_username') == $u_username)
+		if($this->CI->session->userdata('username') == $u_username)
 			return true;
 		
 		
 		//Check against user table
-		$this->CI->db->where('u_username', $u_username); 
-		$this->CI->db->where('u_password', $u_password); 
+		$this->CI->db->where('username', $u_username); 
+		$this->CI->db->where('password', $u_password); 
 //		$this->CI->db->where('me_activation_status', 2); //make sure the email is activated
 		$query = $this->CI->db->get_where($this->user_table);
 		
@@ -397,7 +397,7 @@ class SimpleLoginSecure
 //			$this->CI->db->simple_query('UPDATE ' . $this->user_table  . ' SET me_last_login = "' . date('c') . '" WHERE me_id = ' . $user_data['me_id']);
 
 			//Set session data
-			unset($user_data['u_password']);
+			unset($user_data['password']);
 			//$user_data['member'] = $user_data['me_username']; // for compatibility with Simplelogin
 			$user_data['logged_in'] = true;
 			$this->CI->session->set_userdata($user_data);
