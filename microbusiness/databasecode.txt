@@ -1,0 +1,40 @@
+create database micro_business;
+use micro_business;
+
+create table typeOfUser
+(
+type_id varchar(15) primary key,
+user_type varchar(15)
+);
+
+create table users
+(
+us_id varchar(15) primary key,
+type_id varchar(15),
+name varchar(20),
+ic_no int,
+address varchar(40),
+email varchar(25),
+username varchar(15),
+password varchar(20),
+foreign key (type_id) references typeOfUser (type_id)
+);
+
+create table inventory 
+(
+iv_id varchar(15) primary key,
+item_name varchar(20),
+price float,
+us_id varchar(15),
+foreign key (us_id) references users (us_id)
+);
+
+create table sales
+(
+si_id varchar(15) primary key,
+qty int,
+date date,
+qty_sold int,
+iv_id varchar(15),
+foreign key (iv_id) references inventory (iv_id)
+);

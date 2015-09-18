@@ -68,7 +68,9 @@
 <body>
 
 <div id="container">
-	<h1>Welcome to pie tak hensem!</h1>
+
+	<h1>Welcome to ping pong!</h1>
+
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
