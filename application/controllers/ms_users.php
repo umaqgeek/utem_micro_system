@@ -33,8 +33,14 @@ class Ms_users extends MY_Controller
                 $crud->set_table('users');
 				$crud->set_subject('users');
 				$crud->columns('us_id','type_id','name','ic_no','address','email');
-                $output = $crud->render();
-
+                $crud->set_rules('ic_no','ic number','numeric');
+				$crud->set_rules('password','pass','trim');
+				$crud->required_fields('us_id','type_id', 'email', 'username', 'password');
+				
+				$crud->set_relation('type_id','typeofuser','type_id');
+				
+				$output = $crud->render();
+				
                 $this->viewpage('ms_mainpage', $output);
                 
             } catch (Exception $e) {

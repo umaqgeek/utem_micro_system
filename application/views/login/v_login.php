@@ -4,7 +4,7 @@
     <div class="col-md-6 col-md-offset-3">
         
         <div class="row">
-            <div class="col-md-2">Username :</div>
+            <div class="col-md-2">Use :</div>
             <div class="col-md-6"><input type="text" class="form-control" name="username" placeholder="username" /></div>
         </div>
         <div class="row">
