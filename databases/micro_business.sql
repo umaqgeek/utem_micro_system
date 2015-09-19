@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 17, 2015 at 09:04 AM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Generation Time: Sep 19, 2015 at 04:04 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.5.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -30,9 +30,7 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   `iv_id` varchar(15) NOT NULL,
   `item_name` varchar(20) DEFAULT NULL,
   `price` float DEFAULT NULL,
-  `us_id` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`iv_id`),
-  KEY `us_id` (`us_id`)
+  `us_id` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -54,9 +52,7 @@ CREATE TABLE IF NOT EXISTS `sales` (
   `qty` int(11) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `qty_sold` int(11) DEFAULT NULL,
-  `iv_id` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`si_id`),
-  KEY `iv_id` (`iv_id`)
+  `iv_id` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -75,8 +71,7 @@ INSERT INTO `sales` (`si_id`, `qty`, `date`, `qty_sold`, `iv_id`) VALUES
 
 CREATE TABLE IF NOT EXISTS `typeofuser` (
   `type_id` varchar(15) NOT NULL,
-  `user_type` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`type_id`)
+  `user_type` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -84,7 +79,8 @@ CREATE TABLE IF NOT EXISTS `typeofuser` (
 --
 
 INSERT INTO `typeofuser` (`type_id`, `user_type`) VALUES
-('S1', 'Staff');
+('S1', 'Staff'),
+('S2', 'businessman');
 
 -- --------------------------------------------------------
 
@@ -96,13 +92,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `us_id` varchar(15) NOT NULL,
   `type_id` varchar(15) DEFAULT NULL,
   `name` varchar(20) DEFAULT NULL,
-  `ic_no` int(11) DEFAULT NULL,
+  `ic_no` int(12) DEFAULT NULL,
   `address` varchar(40) DEFAULT NULL,
   `email` varchar(25) DEFAULT NULL,
   `username` varchar(15) DEFAULT NULL,
-  `password` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`us_id`),
-  KEY `type_id` (`type_id`)
+  `password` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -111,7 +105,37 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`us_id`, `type_id`, `name`, `ic_no`, `address`, `email`, `username`, `password`) VALUES
 ('S01', 'S1', 'Rasyidi', 57, 'No 74 Jalan Machang Perdana', 'syidi@gmail.com', 'syidi', '1'),
-('S02', 'S1', 'Amirul Hadi ', 92032108, 'No 45 Jalan TTU 3', 'hadi@gmail.com', 'hadi', '1');
+('S02', 'S1', 'Amirul Hadi ', 92032108, 'No 45 Jalan TTU 3', 'hadi@gmail.com', 'hadi', '1'),
+('S03', 'S2', 'Mohd Syafie', 2147483647, 'Kmpg Tenggayun', 'syafie@gmail.com', 'syafie', '2'),
+('S04', 'S2', 'Amin', 2147483647, 'Perak', 'amin@gmail.com', 'amin', '2');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `inventory`
+--
+ALTER TABLE `inventory`
+ ADD PRIMARY KEY (`iv_id`), ADD KEY `us_id` (`us_id`);
+
+--
+-- Indexes for table `sales`
+--
+ALTER TABLE `sales`
+ ADD PRIMARY KEY (`si_id`), ADD KEY `iv_id` (`iv_id`);
+
+--
+-- Indexes for table `typeofuser`
+--
+ALTER TABLE `typeofuser`
+ ADD PRIMARY KEY (`type_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`us_id`), ADD KEY `type_id` (`type_id`);
 
 --
 -- Constraints for dumped tables
@@ -121,19 +145,19 @@ INSERT INTO `users` (`us_id`, `type_id`, `name`, `ic_no`, `address`, `email`, `u
 -- Constraints for table `inventory`
 --
 ALTER TABLE `inventory`
-  ADD CONSTRAINT `inventory_ibfk_1` FOREIGN KEY (`us_id`) REFERENCES `users` (`us_id`);
+ADD CONSTRAINT `inventory_ibfk_1` FOREIGN KEY (`us_id`) REFERENCES `users` (`us_id`);
 
 --
 -- Constraints for table `sales`
 --
 ALTER TABLE `sales`
-  ADD CONSTRAINT `sales_ibfk_1` FOREIGN KEY (`iv_id`) REFERENCES `inventory` (`iv_id`);
+ADD CONSTRAINT `sales_ibfk_1` FOREIGN KEY (`iv_id`) REFERENCES `inventory` (`iv_id`);
 
 --
 -- Constraints for table `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `typeofuser` (`type_id`);
+ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `typeofuser` (`type_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
