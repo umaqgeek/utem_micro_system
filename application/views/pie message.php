@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>Welcome to PIE HENSEM PUII</title>
 
 	<style type="text/css">
 
@@ -11,10 +11,11 @@
 	::webkit-selection{ background-color: #E13300; color: white; }
 
 	body {
-		background-color: #fff;
+
+		background-color: #f00;
 		margin: 40px;
 		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
+		color: #f0f;
 	}
 
 	a {
@@ -67,7 +68,7 @@
 <body>
 
 <div id="container">
-	<h1>Welcome to HADI HOMEPAGE!</h1>
+	<h1>Welcome to pie tak hensem!</h1>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
