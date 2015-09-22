@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2015 at 04:04 AM
+-- Generation Time: Sep 22, 2015 at 07:58 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.5.19
 
@@ -49,7 +49,7 @@ INSERT INTO `inventory` (`iv_id`, `item_name`, `price`, `us_id`) VALUES
 
 CREATE TABLE IF NOT EXISTS `sales` (
   `si_id` varchar(15) NOT NULL,
-  `qty` int(11) DEFAULT NULL,
+  `qty` text,
   `date` date DEFAULT NULL,
   `qty_sold` int(11) DEFAULT NULL,
   `iv_id` varchar(15) DEFAULT NULL
@@ -60,8 +60,8 @@ CREATE TABLE IF NOT EXISTS `sales` (
 --
 
 INSERT INTO `sales` (`si_id`, `qty`, `date`, `qty_sold`, `iv_id`) VALUES
-('SL01', 20, '2015-09-16', 2, 'V01'),
-('SL02', 30, '2015-09-18', 5, 'V02');
+('SL01', '20', '2015-09-16', 2, 'V01'),
+('SL02', '30', '2015-09-18', 5, 'V02');
 
 -- --------------------------------------------------------
 
@@ -79,8 +79,8 @@ CREATE TABLE IF NOT EXISTS `typeofuser` (
 --
 
 INSERT INTO `typeofuser` (`type_id`, `user_type`) VALUES
-('S1', 'Staff'),
-('S2', 'businessman');
+('S1', 'users'),
+('S2', 'admin');
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `us_id` varchar(15) NOT NULL,
   `type_id` varchar(15) DEFAULT NULL,
   `name` varchar(20) DEFAULT NULL,
-  `ic_no` int(12) DEFAULT NULL,
+  `ic_no` varchar(12) DEFAULT NULL,
   `address` varchar(40) DEFAULT NULL,
   `email` varchar(25) DEFAULT NULL,
   `username` varchar(15) DEFAULT NULL,
@@ -104,10 +104,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`us_id`, `type_id`, `name`, `ic_no`, `address`, `email`, `username`, `password`) VALUES
-('S01', 'S1', 'Rasyidi', 57, 'No 74 Jalan Machang Perdana', 'syidi@gmail.com', 'syidi', '1'),
-('S02', 'S1', 'Amirul Hadi ', 92032108, 'No 45 Jalan TTU 3', 'hadi@gmail.com', 'hadi', '1'),
-('S03', 'S2', 'Mohd Syafie', 2147483647, 'Kmpg Tenggayun', 'syafie@gmail.com', 'syafie', '2'),
-('S04', 'S2', 'Amin', 2147483647, 'Perak', 'amin@gmail.com', 'amin', '2');
+('S01', 'S1', 'Rasyidi', '57', 'No 74 Jalan Machang Perdana', 'syidi@gmail.com', 'syidi', '1'),
+('S02', 'S1', 'Amirul Hadi ', '92032108', 'No 45 Jalan TTU 3', 'hadi@gmail.com', 'hadi', '1'),
+('S03', 'S1', 'Mohd Syafie', '912312312212', 'Kmpg Tenggayun', 'syafie@gmail.com', 'syafie', '2'),
+('S04', 'S2', 'Ahmad', '934577032657', 'Kampung Jerman', 'Ahmad@gmail.com', 'Ahmad', '2');
 
 --
 -- Indexes for dumped tables
