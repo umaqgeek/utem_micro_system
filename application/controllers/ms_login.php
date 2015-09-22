@@ -9,6 +9,7 @@ class Ms_login extends CI_Controller
             parent::__construct(); 
 			// Load session library
 			$this->load->library('session');
+			$this->load->model('m_conndb');
 	}
         
         private function viewpage($page='ms_homelogin',$data=array())
@@ -28,9 +29,9 @@ class Ms_login extends CI_Controller
         {
             $username = $this->input->post('username');
             $password = $this->input->post('password');
-            
+	
             $bol_login = $this->simpleloginsecure->login($username, $password);
-            
+
             if ($bol_login) {
 				$session_data = array(
 				'username' => $this->input->post('username'),
@@ -38,7 +39,13 @@ class Ms_login extends CI_Controller
 				);
         		// Add user data in session
 				$this->session->set_userdata('logged_in', $session_data);
-                redirect(site_url('ms_users'));
+				
+				$query = $this->m_conndb->get_user($username);
+				
+				if($query > 0){redirect(site_url('ms_admin'));}
+				else{redirect(site_url('ms_users'));}				
+				
+				
             } else {
                 redirect(site_url('ms_login'));
             }
@@ -48,6 +55,10 @@ class Ms_login extends CI_Controller
 		
         function logout()
         {
+			$sess_array = array(
+'username' => ''
+);
+$this->session->unset_userdata('logged_in', $sess_array);
             $this->simpleloginsecure->logout();
             redirect(site_url('ms_login'));
         }

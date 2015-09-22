@@ -22,9 +22,10 @@
         <div class="row" style="margin-top: 1%;">
             <div class="col-md-2"></div>
             <div class="col-md-4"><button type="submit" class="btn btn-primary">Login</button>
-			
-        </div>
-        
+		
+		</div>
+        </div>      
+
     </div>
 </div>
 </form>
