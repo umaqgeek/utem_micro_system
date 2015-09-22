@@ -11,13 +11,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="<?=site_url('ms_users'); ?>">Home Page</a>
-        
-                        <a class="navbar-brand topnav" href="<?=site_url('ms_users/inventory'); ?>">Inventory</a>
-                 
-                        
-                        <a class="navbar-brand topnav" href="<?=site_url('ms_users/sales'); ?>">Sales</a>
-                        
+                
+                     
                    
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -28,7 +23,10 @@
                     </li>-->
 
                     <li>
-                        <a href="<?=site_url('ms_login/logout'); ?>">Logout</a>
+                     <a class="navbar-brand topnav" href="<?=site_url('ms_users'); ?>">Home Page </a>
+					 <a class="navbar-brand topnav" href="<?=site_url('ms_users/inventory'); ?>">Inventory</a>
+                     <a class="navbar-brand topnav" href="<?=site_url('ms_users/sales'); ?>">Sales</a>
+                     <a class="navbar-brand topnav" href="<?=site_url('ms_login/logout'); ?>">Logout</a> 
                     </li>
                 </ul>
             </div>
