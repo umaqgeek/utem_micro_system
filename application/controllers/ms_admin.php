@@ -1,8 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Ms_users extends MY_Controller 
+class Ms_admin extends MY_Controller 
 {
-    var $parent_page = "ms_users";
+    var $parent_page = "ms_admin";
 	function __construct()
 	{
             parent::__construct(); 
@@ -14,8 +14,7 @@ class Ms_users extends MY_Controller
     {
 			echo $this->load->view('ms_header', $data, true);
             echo $this->load->view($this->parent_page.'/ms_menu', $data, true);
-			if(!$data==NULL)
-			{ echo $this->load->view($this->parent_page.'/'.$page, $data, true);}
+            echo $this->load->view($this->parent_page.'/'.$page, $data, true);
             echo $this->load->view('ms_footer', $data, true);
     }
 
@@ -26,19 +25,35 @@ class Ms_users extends MY_Controller
 			$username = ($this->session->userdata['logged_in']['username']);
 			$password = ($this->session->userdata['logged_in']['password']);
 			}
+            try {
+/*                $crud = new grocery_CRUD();
 
-			try {
-				$output=0;
-
-				$crud->set_relation('type_id','typeofuser','type_id');
-				
-				$output = $crud->render();
-				
-                $this->viewpage('ms_mainpage', $output);
+                $crud->set_theme('datatables');
                 
+                $crud->set_table('users');
+				$crud->set_subject('users');
+				$crud->columns('us_id','type_id','name','ic_no','address','email');
+                $output = $crud->render();
+
+                $this->viewpage('ms_mainpage', $output);*/
+				
+				
+				    $crud = new grocery_CRUD();
+					$crud->set_table('users')
+						->set_subject('Users')
+						->columns('us_id','type_id','name','ic_no','address','email');
+				 
+					$crud->add_fields('us_id','type_id','name','ic_no');
+					$crud->edit_fields('us_id','type_id','name','ic_no');
+				 
+					$crud->required_fields('us_id','type_id');
+				 
+					$output = $crud->render();
+					$this->viewpage('ms_mainpage', $output);			
             } catch (Exception $e) {
                 show_error($e->getMessage() . ' --- ' . $e->getTraceAsString());
-            }		 	
+            }
+			
         }
 		public function inventory()
 	    {
@@ -105,7 +120,5 @@ class Ms_users extends MY_Controller
                 show_error($e->getMessage() . ' --- ' . $e->getTraceAsString());
             }
 			
-        }		
-
-	
+        }			
 }

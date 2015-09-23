@@ -25,6 +25,13 @@
 			  return $d;
 		  }
 	  }
+     //get the username & password from tbl_usrs
+     function get_user($usr)
+     {
+          $sql = "select * from users where username = '" . $usr ."' and type_id = 'S2'";
+          $query = $this->db->query($sql);
+          return $query->num_rows();
+     }
 	  
 	  function add($table, $data) {
 		  if($this->db->insert($table, $data)) {
