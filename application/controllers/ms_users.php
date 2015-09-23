@@ -27,8 +27,17 @@ class Ms_users extends MY_Controller
 			$password = ($this->session->userdata['logged_in']['password']);
 			}
 
-			try {
-				$output=0;
+            try {
+                $crud = new grocery_CRUD();
+
+                $crud->set_theme('datatables');
+                
+                $crud->set_table('users');
+				$crud->set_subject('users');
+				$crud->columns('us_id','type_id','name','ic_no','address','email');
+                $crud->set_rules('ic_no','ic number','numeric');
+				$crud->required_fields('us_id','type_id', 'email', 'username', 'password');
+				$crud->change_field_type('email', 'email');
 
 				$crud->set_relation('type_id','typeofuser','type_id');
 				
