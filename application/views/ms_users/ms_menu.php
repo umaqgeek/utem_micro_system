@@ -21,10 +21,10 @@
                     </li>-->
                         
 					<li>
-                        <a href="<?=site_url('ms_admin/inventory'); ?>">Inventory</a>
+                        <a href="<?=site_url('ms_users/inventory'); ?>">Inventory</a>
                     </li>
                     <li>
-                        <a href="<?=site_url('ms_admin/sales'); ?>">Sales</a>
+                        <a href="<?=site_url('ms_users/sales'); ?>">Sales</a>
                     </li>
                     <li>
                         <a href="<?=site_url('ms_login/logout'); ?>">Logout</a>
