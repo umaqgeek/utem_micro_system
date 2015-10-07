@@ -39,6 +39,7 @@ class Ms_admin extends MY_Controller
 				
 				
 				    $crud = new grocery_CRUD();
+					$crud->set_theme('datatables');
 					$crud->set_table('users')
 						->set_subject('Users')
 						->columns('us_id','type_id','name','ic_no','address','email');
