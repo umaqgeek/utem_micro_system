@@ -34,12 +34,17 @@ class Ms_users extends MY_Controller
                 
                 $crud->set_table('users');
 				$crud->set_subject('users');
-				$crud->columns('us_id','type_id','name','ic_no','address','email');
+				$crud->columns('type_id','name','address','email');
+				$crud->display_as('type_id','Type of User');
                 $crud->set_rules('ic_no','ic number','numeric');
 				$crud->required_fields('us_id','type_id', 'email', 'username', 'password');
 				$crud->change_field_type('email', 'email');
+				$crud->unset_add();
+				$crud->unset_read_fields('username','password');
+				$crud->unset_delete();
+				$crud->edit_fields('name','ic_no','address','email','username','password');
 
-				$crud->set_relation('type_id','typeofuser','type_id');
+				$crud->set_relation('type_id','typeofuser','user_type');
 				
 				$output = $crud->render();
 				
@@ -47,7 +52,8 @@ class Ms_users extends MY_Controller
                 
             } catch (Exception $e) {
                 show_error($e->getMessage() . ' --- ' . $e->getTraceAsString());
-            }		 	
+            }
+			
         }
 		public function inventory()
 	    {
@@ -60,6 +66,20 @@ class Ms_users extends MY_Controller
 
                 $crud->set_theme('datatables');    
                 $crud->set_table('inventory');
+				$crud->columns('item_name','price','us_id');
+				$crud->display_as('us_id','Name of User')
+					 ->display_as('item_name','Name of Item')
+					 ->display_as('price','Price RM');
+				$crud->set_relation('us_id','users','name');
+				//$crud->set_read_fields('fieldsname');
+				$crud->unset_edit_fields('us_id');
+				
+				
+				/*$crud->callback_before_insert('iv_id',array($this,'get_iv_id'));
+                $crud->callback_field('iv_id',array($this,'get_iv_id'));*/
+				
+				
+				
 				/*$crud->field_type('body','multiselect',
             array('1' => 'active', '2' => 'private','3' => 'spam' , '4' => 'deleted'));*/
 
@@ -105,7 +125,12 @@ class Ms_users extends MY_Controller
 
                 $crud->set_theme('datatables');
                 $crud->set_table('sales');
-
+				$crud->set_relation('iv_id','inventory','item_name');
+				$crud->display_as('iv_id','Name of Item')
+					 ->display_as('qty','quantity')
+					 ->display_as('qty_sold','Quantity sold');
+				$crud->unset_edit_fields('sl_id');
+				$crud->unset_columns('sl_id');
                 $output = $crud->render();
 
                 $this->viewpage('ms_mainpage', $output);

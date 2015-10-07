@@ -47,19 +47,25 @@ class Ms_login extends CI_Controller
 				
 				
             } else {
-                redirect(site_url('ms_login'));
-            }
+		
+		
+			echo "<script type='text/javascript'>alert('login failed! You may insert wrong username or password')
+			</script>";
+			site_url('ms_login');
+			}
+           
+			
         }
 		
 				
 		
         function logout()
         {
-			$sess_array = array(
-'username' => ''
-);
-$this->session->unset_userdata('logged_in', $sess_array);
+			$sess_array = array('username' => '');
+			$this->session->unset_userdata('logged_in', $sess_array);
             $this->simpleloginsecure->logout();
             redirect(site_url('ms_login'));
         }
 }
+
+?>

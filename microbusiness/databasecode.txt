@@ -22,7 +22,7 @@ foreign key (type_id) references typeOfUser (type_id)
 
 create table inventory 
 (
-iv_id varchar(15) primary key,
+iv_id varchar(15) auto_increment primary key,
 item_name varchar(20),
 price float,
 us_id varchar(15),

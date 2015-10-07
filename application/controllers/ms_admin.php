@@ -45,10 +45,12 @@ class Ms_admin extends MY_Controller
 						->columns('us_id','type_id','name','ic_no','address','email');
 				 
 					$crud->add_fields('us_id','type_id','name','ic_no');
-					$crud->edit_fields('us_id','type_id','name','ic_no');
+					$crud->edit_fields('us_id','type_id','name');
 				 
 					$crud->required_fields('us_id','type_id');
-				 
+					$crud->display_as('type_id','Type of User');
+					$crud->set_relation('type_id','typeofuser','user_type');
+					$crud->unset_fields('username','password');
 					$output = $crud->render();
 					$this->viewpage('ms_mainpage', $output);			
             } catch (Exception $e) {
@@ -67,6 +69,8 @@ class Ms_admin extends MY_Controller
 
                 $crud->set_theme('datatables');    
                 $crud->set_table('inventory');
+				$crud->set_relation('us_id','users','name');
+				//$crud->columns('iv_id','item_name','price','us_id');
 				/*$crud->field_type('body','multiselect',
             array('1' => 'active', '2' => 'private','3' => 'spam' , '4' => 'deleted'));*/
 
@@ -112,6 +116,11 @@ class Ms_admin extends MY_Controller
 
                 $crud->set_theme('datatables');
                 $crud->set_table('sales');
+				$crud->unset_columns('sl_id');
+				$crud->set_relation('iv_id','inventory','item_name');
+				$crud->display_as('iv_id','Name of Item')
+					 ->display_as('qty','quantity')
+					 ->display_as('qty_sold','Quantity sold');
 
                 $output = $crud->render();
 
