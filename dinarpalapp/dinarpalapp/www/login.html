@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Codeigniter, bootstrap">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootigniter.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="navbar-dinarpal navbar-default navbar-fixed-top">
+        <div class="container">
+
+            <center>
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="container-fluid">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="index.html"><img src="assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+
+                                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+
+                         
+                            </ul>
+
+
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="login.html"><i class="fa fa-sign-in"></i> Login</a></li>
+                                <li><a href="register.html"><i class="fa fa-users"></i> Register</a></li>
+                            </ul>
+                            
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </center>
+        </div>
+
+
+    </div>
+
+<div class="container">
+    <BR><BR>
+    <center><img src="assets/images/fw.png" width="50" height="50" align="center"></center>
+    <div class="row">
+
+
+
+        <div class="col-md-6 col-md-offset-3 img-rounded" style="margin-top:2%; background-color: rgba(200,200,200,0.2); height: 330px;">
+
+
+            <div class="col-md-10 col-md-offset-1">
+
+                <BR>
+
+                <h3 class="form-signin-heading">Please sign in</h3>
+                
+                <input type="text" class="form-control" name="username" id="name" placeholder="Username" required autofocus><BR>
+                <input type="password" class="form-control" name="password" id="pass" placeholder="Password" required>
+                <a id="errormsg"></a><br/>
+                <label class="checkbox" style=" text-align: right;">
+                    
+                    <a href="forgotPassword.html"><font size="2">Forgot password?</font></a>
+                </label>
+
+                <!-- <div class="col-lg-12"> -->
+                <button class="btn btn-lg btn-dinarpal btn-block" id="buttonlogin">Log In</button>
+                <!--  </div>  -->
+                <BR>
+                <!-- <div class="col-lg-12"> -->
+                <a class="btn btn-lg btn-dinarpal btn-block" href="register.html">Register</a>
+                <!-- </div> -->
+    
+            </div>
+        </div>
+   </div>
+</div>
+
+
+
+    <script src="js/jquery-1.11.1.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/bootigniter.js"></script>
+
+    <script src="js/bootbox.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+
+        $("#buttonlogin").click(function() {
+
+            var name = $("#name").val();
+            var pass = $("#pass").val();
+
+            $.post("http://192.168.0.24/try/login.php",
+            {
+                name: name,
+                pass: pass
+
+            }).done(function( data ) {
+                if (data == 'true') {
+                    window.location.replace("home.html");
+                } else {
+                    bootbox.alert(data, function () {
+                        console.log("Alert Callback");
+                    });
+                };
+            });
+
+        });
+
+    });
+    </script>
+</body>
+</html>
