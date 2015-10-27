@@ -26,17 +26,6 @@ class Ms_admin extends MY_Controller
 			$password = ($this->session->userdata['logged_in']['password']);
 			}
             try {
-/*                $crud = new grocery_CRUD();
-
-                $crud->set_theme('datatables');
-                
-                $crud->set_table('users');
-				$crud->set_subject('users');
-				$crud->columns('us_id','type_id','name','ic_no','address','email');
-                $output = $crud->render();
-
-                $this->viewpage('ms_mainpage', $output);*/
-				
 				
 				    $crud = new grocery_CRUD();
 					$crud->set_theme('datatables');
@@ -51,6 +40,7 @@ class Ms_admin extends MY_Controller
 					$crud->display_as('type_id','Type of User');
 					$crud->set_relation('type_id','typeofuser','user_type');
 					$crud->unset_fields('username','password');
+
 					$output = $crud->render();
 					$this->viewpage('ms_mainpage', $output);			
             } catch (Exception $e) {
