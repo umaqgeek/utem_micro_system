@@ -1,12 +1,13 @@
 <?php 
-
+session_start();
 include "connect.php";
 
 
  if (isset($_POST['name'])  && isset($_POST['pass'])){
- 
-  $user= $_POST['name'];
-  $pass= $_POST['pass'];
+	
+	$_SESSION['user']= $_POST['name'];
+	$user= $_POST['name'];
+	$pass= $_POST['pass'];
   
   $sql = "SELECT * from members where me_username = '".$user."' and me_password = '".$pass."';";
   $result = mysql_query($sql);

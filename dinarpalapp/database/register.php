@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 include "connect.php";
  
   $name= $_POST['name'];
