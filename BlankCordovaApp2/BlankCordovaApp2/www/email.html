@@ -23,7 +23,7 @@
     <script src="js/bootigniter.js"></script>
     <script src="js/encryption.js"></script> 
     <script src="js/jquery.zclip.js"></script> 
-
+      <script src="js/bootbox.js"></script>
 
     
 
@@ -301,9 +301,7 @@
 
              <li><a href="login.html" style=" padding-top:1.5em;" ><i class="fa fa-sign-out"></i> Logout</a></li>
           </ul>
-         <!-- <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>-->
+         
         </div>
       </div>
     </div>
@@ -326,12 +324,16 @@ onclick="location.href='addemail.html'">Add New Email</button>
 <script>
     $(document).ready(function () {
 
-        $.get("http://192.168.0.23/database/email.php", function (data) {
+        $.get("http://192.168.1.13/database/email.php", function (data) {
 
             $("#emailtab").html(data);
 
 
         });
+
+        
+
+       
 
 	// checking idle time
 	timerIncrement();
@@ -410,91 +412,7 @@ $(document).ready(function() {
 });
 </script>
 
-<script>
-idleTime = 0;
 
-$(document).ready(function() {
-	var it = $("#item_type").val();
-	$.post( "http://dinarpal.com/index.php/member/getAjaxItemType", { it_id: it }).done(function( data ) {
-		$("#item_type_child_change").html( data );
-  	});
-	$("#item_type").change(function() {
-		it = $(this).val();
-		$.post( "http://dinarpal.com/index.php/member/getAjaxItemType", { it_id: it }).done(function( data ) {
-			$("#item_type_child_change").html( data );
-  		});
-	});
-	getList1();
-});
-
-function addCommas(n){
-    var rx=  /(\d+)(\d{3})/;
-    return String(n).replace(/^\d+/, function(w){
-        while(rx.test(w)){
-            w= w.replace(rx, '$1,$2');
-        }
-        return w;
-    });
-}
-
-tukarRate();
-function calculate(n) {
-	var it = document.getElementById('it'+n).value;
-	var w = document.getElementById('w'+n).value;
-	var pu = document.getElementById('pu'+n).value;
-	var price = 0.00;
-	var nilai = 0.00;
-	$.post( "http://dinarpal.com/index.php/main/ajaxCalculator/" + it + '/' + pu ).done(function( data ) {
-		var d = data;
-		price = d.split('|')[0] / d.split('|')[1];
-		nilai = price * w;
-		document.getElementById('price'+n).innerHTML = addCommas(price.toFixed(2));
-		document.getElementById('nilai'+n).innerHTML = addCommas(nilai.toFixed(2));
-		document.getElementById('price_'+n).value = price.toFixed(2);
-		document.getElementById('nilai_'+n).value = nilai.toFixed(2);
-		var totaPrice = 0.00;
-		for (i = 1; i <= 5; i++) {
-			totaPrice += parseFloat(document.getElementById('nilai_'+i).value);
-		}
-		document.getElementById('totaPrice').innerHTML = addCommas(totaPrice.toFixed(2));
-		document.getElementById('totaPrice_1').value = totaPrice.toFixed(2);
-		var col_rate = document.getElementById('col_rate').value;
-		var col_nilai = totaPrice * (col_rate * 1.0 / 100);
-		document.getElementById('col_nilai').innerHTML = addCommas(col_nilai.toFixed(2));
-		var keeping_period = document.getElementById('keeping_period').value;
-		var safe_keeping_fee = document.getElementById('safe_keeping_fee').innerHTML;
-		var keeping_period_fee = totaPrice * (safe_keeping_fee / 100) * keeping_period;
-		document.getElementById('keeping_period_fee').innerHTML = addCommas(keeping_period_fee.toFixed(2));
-	});
-}
-function tukarRate() {
-	var totaPrice = 0.00;
-	for (i = 1; i <= 5; i++) {
-		totaPrice += parseFloat(document.getElementById('nilai_'+i).value);
-	}
-	document.getElementById('totaPrice').innerHTML = addCommas(totaPrice.toFixed(2));
-	document.getElementById('totaPrice_1').value = totaPrice.toFixed(2);
-	var col_rate = document.getElementById('col_rate').value;
-	var col_nilai = totaPrice * (col_rate * 1.0 / 100);
-	document.getElementById('col_nilai').innerHTML = addCommas(col_nilai.toFixed(2));
-	var keeping_period = document.getElementById('keeping_period').value;
-	var safe_keeping_fee = document.getElementById('safe_keeping_fee').innerHTML;
-	var keeping_period_fee = totaPrice * (safe_keeping_fee / 100) * keeping_period;
-	document.getElementById('keeping_period_fee').innerHTML = addCommas(keeping_period_fee.toFixed(2));
-}
-function validateField(field) {
-	if (field == '') {
-		return false;
-	}
-	if (field == null) {
-		return false;
-	}
-	if (field == 0) {
-		return false;
-	}
-	return true;
-}
-</script>
 
 
 </body>

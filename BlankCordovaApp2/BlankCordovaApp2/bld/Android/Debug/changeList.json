@@ -977,16 +977,28 @@
     "www\\imagess\\emas.png",
     "BlankCordovaApp2\\platforms\\android\\CordovaLib\\build\\intermediates\\classes\\debug\\org\\apache\\cordova\\Whitelist.class",
     "BlankCordovaApp2\\platforms\\android\\build\\intermediates\\assets\\debug\\www\\img\\a12.png",
-    "plugins\\cordova-plugin-splashscreen\\plugin.xml"
+    "plugins\\cordova-plugin-splashscreen\\plugin.xml",
+    "www\\jss\\connect.js",
+    "www\\img\\Remove.png",
+    "www\\delEmail.html",
+    "www\\aditcard - Copy.html",
+    "www\\email(1).html",
+    "www\\rahnuCalculator.html",
+    "www\\changePassword.html",
+    "www\\memberSearch.html",
+    "www\\delCard.html",
+    "www\\delBank.html",
+    "www\\assets\\uploads\\profile\\default-img.jpg"
   ],
-  "deletedFilesIos": [],
+  "deletedFilesIos": [
+    "www\\email (1).html",
+    "www\\delEmail - Copy.html",
+    "www\\delCard - Copy.html"
+  ],
   "addedPluginsIos": [],
   "deletedPluginsIos": [],
   "changedFiles": [
-    "www\\malaf.html",
-    "www\\profile.html",
-    "www\\addemail.html",
-    "www\\email.html"
+    "www\\memberSearch.html"
   ],
   "deletedFiles": [],
   "addedPlugins": [],

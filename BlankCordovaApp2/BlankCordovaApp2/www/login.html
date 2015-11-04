@@ -425,7 +425,7 @@ Al-DinarPal Group. All right reserved 2013 - 2015.
 
 <script src="js/bootigniter.js"></script>
 
-
+      <script src="js/bootbox.js"></script>
 
 <script type="text/javascript">
 
@@ -436,7 +436,7 @@ $(document).ready(function() {
         var name = $("#name").val();
         var pass = $("#pass").val();
 
-        $.post("http://192.168.0.23/database/login.php",
+        $.post("http://192.168.1.6/database/login.php",
         {
             name: name,
             pass: pass

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Codeigniter, bootstrap">
+    <meta name="author" content="Zulfindra">
+    <!-- batas -->
+    <title>DinarPal</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/design_ori/favicon.ico">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootigniter.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <![endif]-->
+</head>
+<body>
+
+
+    <script src="js/jquery-1.11.1.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+
+    <script src="js/bootigniter.js"></script>
+
+    <script src="js/bootbox.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var ca_id = sessionStorage.getItem('id');
+            var st = sessionStorage.getItem('stat');
+
+            if (st != 1) {
+
+                $.post("http://192.168.1.13/database/delCard.php",
+            {
+                ca_id: ca_id
+
+            }).done(function (data) {
+                bootbox.alert(data, function () {
+                    window.location.replace("card.html");
+                });
+
+            });
+            } else {
+                bootbox.alert("Sorry, you cannot delete primary card.", function () {
+                    window.location.replace("card.html");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
