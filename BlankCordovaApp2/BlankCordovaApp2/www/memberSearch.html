@@ -557,7 +557,7 @@ function timerIncrement() {
 $(document).ready(function() {
 	$("#search").click(function() {
 		var cari = $("#carian").val();
-		$.post("http://192.168.1.6/database/search.php", { username: cari }).done(function (data) {
+		$.post(c.connect + "search.php", { username: cari }).done(function (data) {
 
 		    if (data == 0) {
 		        bootbox.alert("Sorry, there is no such username in this system.");

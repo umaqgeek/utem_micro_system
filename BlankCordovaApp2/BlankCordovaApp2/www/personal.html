@@ -209,7 +209,7 @@ $(document).ready(function() {
         var mail = $("#me_email").val();
         var pass = $("#me_password").val();
 
-        $.post("http://192.168.0.25/database/register.php",
+        $.post(c.connect + "register.php",
         {
             name: name,
             lname: lname,

@@ -428,7 +428,7 @@
     <script>
         $(document).ready(function () {
 
-            $.get("http://192.168.0.23/database/loadProfile.php", function (data) {
+            $.get(c.connect + "loadProfile.php", function (data) {
                 data = $.parseJSON(data);
 
                 $("#me_firstname").val(data.fname);

@@ -1,246 +1,114 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, length=device-length" />
-    <title></title>
-</head>
-<body style="padding:0px; margin:0px; background-color:#fff;">
-
-    <!-- The following codes demostrate jssor slider work independently without any other javascript library. -->
-
-    <script type="text/javascript" src="js/jssor.slider-20.min.js"></script>
-    <!-- use jssor.slider-20.debug.js instead for debug -->
-    <script>
-
-        jssor_1_slider_init = function() {
-
-            var jssor_1_SlideshowTransitions = [
-              {$Duration:1000,$Opacity:2}
-            ];
-
-            var jssor_1_options = {
-              $AutoPlay: true,
-              $SlideshowOptions: {
-                $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_1_SlideshowTransitions,
-                $TransitionsOrder: 1
-              },
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$
-              }
-            };
-
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-            //responsive code begin
-            //you can remove responsive code if you don't want the slider scales while window resizes
-            function ScaleSlider() {
-
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-                if (refSize) {
-                    refSize = Math.min(refSize, 600);
-                    jssor_1_slider.$ScaleWidth(refSize);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 0);
-                }
-            }
-            ScaleSlider();
-            screen.lockOrientation('portrait');
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
-            $Jssor$.$AddEvent(window, "orientation", ScaleSlider);
-            //responsive code end
-        };
-    </script>
-
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.css">
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- Demo styles -->
     <style>
-        .button {
-            position: absolute;
+        html, body {
+            position: relative;
+            height: 100%;
         }
 
-        .login_logout {
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
             text-align: center;
-            width: 100px;
-            height: 15px;
-            margin-left: 5px;
-            display: block;
-            border: solid thin #666;
-            background: #CCC;
-        }
-
-        .myButton {
-            -moz-box-shadow: inset 0px 1px 0px 0px #fff6af;
-            -webkit-box-shadow: inset 0px 1px 0px 0px #fff6af;
-            box-shadow: inset 0px 1px 0px 0px #fff6af;
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
-            background: -moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-            background: -webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-            background: -o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-            background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
-            background-color: #ffec64;
-            -moz-border-radius: 6px;
-            -webkit-border-radius: 6px;
-            border-radius: 6px;
-            border: 1px solid #ffaa22;
-            display: inline-block;
-            cursor: pointer;
-            color: #333333;
-            font-family: Arial;
             font-size: 18px;
-            font-weight: bold;
-            padding: 2px 14px;
-            text-decoration: none;
-            text-shadow: 0px 1px 0px #ffee66;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
         }
 
-            .myButton:hover {
-                background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
-                background: -moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-                background: -webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-                background: -o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-                background: -ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-                background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
-                background-color: #ffab23;
-            }
 
-            .myButton:active {
-                position: relative;
-                top: 1px;
-            }
-        /* jssor slider bullet navigator skin 05 css */
-        /*
-        .jssorb05 div           (normal)
-        .jssorb05 div:hover     (normal mouseover)
-        .jssorb05 .av           (active)
-        .jssorb05 .av:hover     (active mouseover)
-        .jssorb05 .dn           (mousedown)
-        */
-        .jssorb05 {
-            position: absolute;
-        }
 
-            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
-                position: absolute;
-                /* size of bullet elment */
-                width: 16px;
-                height: 16px;
-                background: url('img/b05.png') no-repeat;
-                overflow: hidden;
-                cursor: pointer;
-            }
-
-            .jssorb05 div {
-                background-position: -7px -7px;
-            }
-
-                .jssorb05 div:hover, .jssorb05 .av:hover {
-                    background-position: -37px -7px;
-                }
-
-            .jssorb05 .av {
-                background-position: -67px -7px;
-            }
-
-            .jssorb05 .dn, .jssorb05 .dn:hover {
-                background-position: -97px -7px;
-            }
-
-        /* jssor slider arrow navigator skin 12 css */
-        /*
-        .jssora12l                  (normal)
-        .jssora12r                  (normal)
-        .jssora12l:hover            (normal mouseover)
-        .jssora12r:hover            (normal mouseover)
-        .jssora12l.jssora12ldn      (mousedown)
-        .jssora12r.jssora12rdn      (mousedown)
-        */
-        .jssora12l, .jssora12r {
-            display: block;
-            position: absolute;
-            /* size of arrow element */
-            width: 30px;
-            height: 46px;
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        .jssora12l {
-            background-position: -16px -37px;
-        }
-
-        .jssora12r {
-            background-position: -75px -37px;
-        }
-
-        .jssora12l:hover {
-            background-position: -136px -37px;
-        }
-
-        .jssora12r:hover {
-            background-position: -195px -37px;
-        }
-
-        .jssora12l.jssora12ldn {
-            background-position: -256px -37px;
-        }
-
-        .jssora12r.jssora12rdn {
-            background-position: -315px -37px;
-        }
-
-        @media screen and (orientation: portrait) {
-      
-  }
     </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(img/23.jpg); background-size:100%; color:white;font-family:'gisha';">
 
-    <div id="jssor_1" style=" margin: 0 auto; top: 0px; left: 0px; width: 360px; height: 620px; ">
-        <!-- Loading Screen -->
-        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 360px; height:620px;"></div>
-            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:360px;height:620px;">
+                <p style="font-size:large; margin-bottom:200px">
+                    <b style="font-size:20px">Surah Al-Imran: Verse 75</b><br><br>
+                    "Among the People of the Book, there are people who, if thou trust him with a weight of treasure, will return it (properly) to you, and some of them who, if though trust store 1 dinar already"
+                </p>
 
+            </div>
+           
+            <div class="swiper-slide">
+                <div class="swiper-slide" style="background-image: url(img/26.jpg); background-size:100%; color:white;font-family:'gisha';">
+
+                    <p style="font-size:large; margin-top:00px">
+                        <b style="font-size:20px">Open for HALAL business</b><br><br>
+                        Now you can purchase on our HALAL marketplace or your favorite merchant store using your DinarPal account.
+                    </p>
+
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide" style="background-image: url(img/24.jpg); background-size:100%; color:white;font-family:'gisha';">
+
+                    <p style="font-size:large; margin-top:0px">
+                        <b style="font-size:20px">Payments in Dinar  <span> & </span> Dirham</b><br><br>
+                        Gold gram transfer and silver gram transfer. Feel the excitement.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-slide" style="background-image: url(img/sunset.jpg); background-size:cover; color:white;font-family:'gisha';">
+
+                    <p><button style="color:white" class="btn blue btn-block waves-attach waves-button" type="button" onclick="location.href='login.html'">Let's Get Started!</button>
+                    </p>
+                </div>
             </div>
         </div>
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 360px; height: 620px; overflow: hidden;">
-            <div style="display: none;">
-                <img data-u="image" src="img/11.jpg" />
-            </div>
-            <div style="display: none;">
-                <img data-u="image" src="img/15.jpg" />
-            </div>
-            <div style="display: none;">
-                <img data-u="image" src="img/13.jpg" />
-            </div>
-
-        </div>
-
-        <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb05" style="bottom:100px;right:6px;" data-autocenter="1">
-            <!-- bullet navigator item prototype -->
-            <div data-u="prototype" style="width:16px;height:16px;"></div>
-        </div>
-        <!-- Arrow Navigator -->
-        <span data-u="arrowleft" class="jssora12l" style="top:123px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
-        <span data-u="arrowright" class="jssora12r" style="top:123px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
-        <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
-
+      
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        
     </div>
-    <!--Button-->
-    <div class="button" style="height:30px; width:360px;bottom:40px;right:6px;" data-autocenter="1" align="center">
-        <a href="login.html"><input type="submit" class="myButton" value="Log In"></a>
-        <a href="register.html"><input type="submit" class="myButton" value="Sign Up"></a>
-    </div>
+    
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery-1.11.1.js"></script>
+    <!-- Initialize Swiper -->
     <script>
-        jssor_1_slider_init();
-    </script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
 
+    </script>
 </body>
 </html>

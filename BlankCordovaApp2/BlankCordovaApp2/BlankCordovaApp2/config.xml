@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myappf68b4d" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
-  <name>BlankCordovaApp2</name>
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myappa39101" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
+  <name>BlankCordovaApp1</name>
   <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
   <author href="http://cordova.io" email="dev@cordova.apache.org">Apache Cordova Team </author>
   <content src="index.html" />
@@ -75,9 +75,14 @@
     <icon src="res/icons/wp8/Background.png" width="173" height="173" />
   </platform>
   <platform name="android">
-
-    <splash src="res/screens/android/screen-hdpi-portrait1.png" density="port-hdpi" />
-
+    <splash src="res/screens/android/screen-hdpi-landscape.png" density="land-hdpi" />
+    <splash src="res/screens/android/screen-ldpi-landscape.png" density="land-ldpi" />
+    <splash src="res/screens/android/screen-mdpi-landscape.png" density="land-mdpi" />
+    <splash src="res/screens/android/screen-xhdpi-landscape.png" density="land-xhdpi" />
+    <splash src="res/screens/android/screen-hdpi-portrait.png" density="port-hdpi" />
+    <splash src="res/screens/android/screen-ldpi-portrait.png" density="port-ldpi" />
+    <splash src="res/screens/android/screen-mdpi-portrait.png" density="port-mdpi" />
+    <splash src="res/screens/android/screen-xhdpi-portrait.png" density="port-xhdpi" />
   </platform>
   <platform name="ios">
     <splash src="res/screens/ios/screen-iphone-portrait.png" width="320" height="480" />
@@ -99,10 +104,5 @@
   <platform name="wp8">
     <splash src="res/screens/wp8/SplashScreenImage.jpg" width="480" height="800" />
   </platform>
-  <preference name="KeepRunning" value="True" />
-  <preference name="ShowTitle" value="True" />
-  <preference name="InAppBrowserStorageEnabled" value="True" />
-  <preference name="SuppressesIncrementalRendering" value="True" />
-  <vs:plugin name="cordova-plugin-camera" version="1.2.0" />
-  <vs:plugin name="cordova-plugin-splashscreen" version="2.1.0" />
+  <vs:plugin name="cordova-plugin-websql" version="0.0.10" />
 </widget>
