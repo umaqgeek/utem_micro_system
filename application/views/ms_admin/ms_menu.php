@@ -26,8 +26,12 @@
                         <a href="<?=site_url('ms_admin/sales'); ?>">Sales</a>
                     </li>
                     <li>
+                        <a href="<?=site_url('ms_admin/line_chart_advanced'); ?>">Graph</a>
+                    </li>
+                    <li>
                         <a href="<?=site_url('ms_login/logout'); ?>">Logout</a>
                     </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

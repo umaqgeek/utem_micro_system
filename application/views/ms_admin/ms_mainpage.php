@@ -3,7 +3,7 @@ if (isset($this->session->userdata['logged_in'])) {
 $username = ($this->session->userdata['logged_in']['username']);
 
 } else {
-header("location: login");
+header("location: ms_login");
 }
 ?>
 

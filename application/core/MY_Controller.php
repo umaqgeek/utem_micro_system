@@ -6,7 +6,7 @@ class MY_Controller extends CI_Controller
    function __construct()
     {
         parent::__construct();
-		$unlocked = array('ms_login', 'ms_users', 'ms_admin');
+		$unlocked = array('ms_login', 'ms_users', 'ms_admin', 'graph');
 
 				if ( ! $this->simpleloginsecure->is_logged_in() OR ! in_array(strtolower(get_class($this)), $unlocked))
 				{

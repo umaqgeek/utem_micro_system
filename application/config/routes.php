@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "ms_users";
+$route['default_controller'] = "ms_login";
 $route['404_override'] = '';
 
 
