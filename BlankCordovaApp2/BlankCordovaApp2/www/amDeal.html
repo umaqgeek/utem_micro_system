@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>main</title>
+    <!-- css -->
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- css for this project -->
+    <link href="material/css/project.min.css" rel="stylesheet">
+    <link href="csss/font-awesome.min.css" rel="stylesheet">
+    <style>
+        #slide {
+            display: none;
+        }
+    </style>
+</head>
+<body class="avoid-fout page-amber" style="background-image:url('img/drkblue.jpg'); font-family:Gisha" >
+    
+
+    <header class="header header-transparent header-waterfall">
+        <ul class="nav nav-list pull-left">
+            <li>
+                <a onclick="back()">
+                    <img src="img/left.png" width="25" />
+                </a>
+            </li>
+        </ul>
+
+        <b class="header-affix-hide" data-offset-top="0">
+            <a class="header-logo" href="home.html"><img src="assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+        </b>
+
+        <ul class="nav nav-list pull-right">
+            <li>
+                <a data-toggle="menu" href="#profile">
+
+                    <span class="avatar"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+
+    <nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
+        <div class="menu-scroll">
+            <div class="menu-top">
+                <div class="menu-top-img">
+                    <img alt="John Smith" src="img/header.jpg">
+                </div>
+                <div class="menu-top-info">
+                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>Umar Mukhtar</a>
+                </div>
+                <div class="menu-top-info-sub">
+                    <small>Have a nice day Umar! ;)</small>
+                </div>
+            </div>
+            <div class="menu-content">
+                <ul class="nav">
+                    <li>
+                        <a class="waves-attach" href="profile.html"><img src="img/profile.png" width="30"> &emsp;Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="email.html"><img src="img/email.png" width="30"> &emsp;E-mail</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="card.html"><img src="img/card.png" width="30"> &emsp;Card</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="bank.html"><img src="img/bank.png" width="30"> &emsp;Bank</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnuCalculator.html"><img src="img/calculator.png" width="30"> &emsp;Calculator</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="changePassword.html"><img src="img/changepass.png" width="30"> &emsp;Change Password</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="memberSearch.html"><img src="img/search.png" width="30"> &emsp;Member Search</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="login.html"><img src="img/logout2.png" width="25"> &emsp;  Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+
+    <header class="header header-amber"></header>
+    <div class="content" id="slide" >
+
+        <div class="container">
+
+            <div class="row">
+                <center><h3 style="color:white">Regular Transaction</h3></center><hr>
+                <div class="container" >
+
+                    
+                        <div class="tab-content">
+								<!--<div class="tab-pane fade active in" id="first-tab-amber">-->
+								<Br>
+									<center>
+									<button style="color:black; font-family:gisha; height:40px;" class="btn btn-block waves-attach waves-button" data-toggle="tab"
+									type="button" onclick="location.href='amanahDeal.html'">Amanah Deal
+									</button>
+									</center>
+								<!--</div>-->
+								<!--<div class="tab-pane fade" id="second-tab-amber">-->
+								<Br>
+									<center>
+									<button style="color:black; font-family:gisha; height:40px;" class="btn btn-block waves-attach waves-button" data-toggle="tab"
+									type="button" onclick="location.href='paymentGramAD.html'">Gram
+									</button>
+									</center>
+								<!--</div>-->
+								<Br>
+									<center>
+									<button style="color:black; font-family:gisha; height:40px;" class="btn btn-block waves-attach waves-button" data-toggle="tab"
+									type="button" onclick="location.href='ADList.html'">Amanah Deal Review
+									</button>
+									</center>
+						
+			            </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="material/js/base.min.js"></script>
+    <!-- js for this project -->
+    <script src="material/js/project.min.js"></script>
+    <script src="clipboard/clipboard.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $("#slide").toggle("slide", { direction: "right" }, 400);
+
+
+        $(document).ready(function () {
+
+            
+            var tt;
+            var at;
+            var am;
+            var not;
+
+            $("#proBtn").click(function () {
+                 tt = $("#ttype").val();
+                 at = $("#acType").val();
+                 am = $("#amount").val();
+                 not = $("#note").val();
+               
+                $("#am").html(am);
+                $("#tt").html(tt);
+                $("#at").html(at);
+                $("#not").html(not);
+                $("#modConfirm").modal();
+                return false;
+            });
+
+
+            $("#conBtn").click(function () {
+            $.post(c.connect + "deposit.php",
+                {
+                    tt: tt,
+                    at: at,
+                    am: am,
+                    not: not
+
+                }).done(function (data) {
+                    data = $.parseJSON(data);
+                    
+                    if (data.res == 'true') {
+                        $("#ams").html(data.am);
+                        $("#ref").html(data.ref);
+                        $("#modSuc").modal();
+                    } else {
+                        $("#msg").html(data.res);
+                        $("#modSuc").modal();
+                    };
+                });
+            });
+
+            $("#copyBtn").click(function () {
+                clipboard.copy($("#ref").html()).then(function () {
+                    $("#copymsg").html('Reference code copied to clipboard');
+                }, function (err) {
+                    //document.getElementById("markup-dom-copy-result").textContent = err;
+                });
+
+            });
+
+         
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>main</title>
+    <!-- css -->
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- css for this project -->
+    <link href="material/css/project.min.css" rel="stylesheet">
+    <link href="csss/font-awesome.min.css" rel="stylesheet">
+    <style>
+        #content {
+            display: none;
+        }
+        b{
+            color:black;
+        }
+    </style>
+</head>
+<body class="avoid-fout page-amber" style="font-family:Gisha">
+    
+
+    <header class="header header-transparent header-waterfall">
+        <ul class="nav nav-list pull-left">
+            <li>
+                <a onclick="back()">
+                    <img src="img/left.png" width="25" />
+                </a>
+            </li>
+        </ul>
+
+        <div class="header-affix-hide" data-offset-top="0">
+            <a class="header-logo" href="home.html"><img src="assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+        </div>
+
+        <ul class="nav nav-list pull-right">
+            <li>
+                <a data-toggle="menu" href="#profile">
+                    <span class="access-hide">Welcome!</span>
+                    <span class="avatar"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
+        <div class="menu-scroll">
+            <div class="menu-top">
+                <div class="menu-top-img">
+                    <img alt="John Smith" src="img/header.jpg">
+                </div>
+                <div class="menu-top-info">
+                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>Umar Mukhtar</a>
+                </div>
+                <div class="menu-top-info-sub">
+                    <small>Have a nice day Umar! ;)</small>
+                </div>
+            </div>
+            <div class="menu-content">
+                <ul class="nav">
+                    <li>
+                        <a class="waves-attach" href="profile.html"><img src="img/profile.png" width="30"> &emsp;Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="email.html"><img src="img/email.png" width="30"> &emsp;E-mail</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="Card.html"><img src="img/card.png" width="30"> &emsp;Card</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="Bank.html"><img src="img/bank.png" width="30"> &emsp;Bank</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnuCalculator.html"><img src="img/calculator.png" width="30"> &emsp;Calculator</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="changePassword.html"><img src="img/changepass.png" width="30"> &emsp;Change Password</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="memberSearch.html"><img src="img/search.png" width="30"> &emsp;Member Search</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="login.html"><img src="img/logout2.png" width="25"> &emsp;  Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+
+    <header class="header header-amber"></header>
+    <div class="content" id="content">
+
+        <div class="container">
+            <div class="row">
+                <center><h3 >Ar-Rahnu Calculator</h3></center><hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3">
+                            <div class="tab-content">
+                                <div class="tab-pane fade active in" id="first-tab-amber">
+                                    <form class="form">
+                                        <div class="form-group-amber form-group-label">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-push-1">
+                                                    <label>Item Type</label>
+                                                    <select class="form-control" name="it1" id="it1" onchange="calculate(1);">
+                                                        <option value="1">Gold</option>
+                                                        <option value="2">Silver</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group-amber form-group-label">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-push-1">
+                                                    <label>Purity</label>
+                                                    <select class="form-control" name="pu1" id="pu1" onchange="calculate(1);">
+                                                        <option value="1">999</option>
+                                                        <option value="2">950</option>
+                                                        <option value="3">916</option>
+                                                        <option value="4">875</option>
+                                                        <option value="5">835</option>
+                                                        <option value="6">750</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group-amber form-group-label">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-push-1">
+                                                    <label>Rate (MYR)</label>
+                                                    <input name="w1" type="text" class="form-control" id="price1" style="color:black" readonly />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group-amber form-group-label">
+                                            <div class="row">
+                                                <div class="col-md-10 col-md-push-1">
+                                                    <label>Weight (gram)</label>
+                                                    <input name="w1" type="number" class="form-control" id="w1" onkeyup="calculate(1);" value="" placeholder="0.00" />
+
+                                                    <input name="price_1" id="price_1" type="hidden" value="0.00" />
+                                                    <input name="nilai_1" id="nilai_1" type="hidden" value="0.00" />
+                                                    <input name="price_2" id="price_2" type="hidden" value="0.00" />
+                                                    <input name="nilai_2" id="nilai_2" type="hidden" value="0.00" />
+                                                    <input name="price_3" id="price_3" type="hidden" value="0.00" />
+                                                    <input name="nilai_3" id="nilai_3" type="hidden" value="0.00" />
+                                                    <input name="price_4" id="price_4" type="hidden" value="0.00" />
+                                                    <input name="nilai_4" id="nilai_4" type="hidden" value="0.00" />
+                                                    <input name="price_5" id="price_5" type="hidden" value="0.00" />
+                                                    <input name="nilai_5" id="nilai_5" type="hidden" value="0.00" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                        
+
+                                        <button style="color:black" class="btn btn-block waves-attach waves-button" data-toggle="tab" href="#second-tab-amber">Calculate</button>
+                                    </form>
+                                </div>
+
+
+
+
+                                <!--result //////////////////////////////////////////////////////-->
+                                <div class="tab-pane fade" id="second-tab-amber">
+                                    <div class="menu-content">
+                                                <ul class="nav" style="border-bottom:solid 1px; border-bottom-color:#cccccc">
+                                                    <li style="border-top:solid 1px; border-top-color:#cccccc">
+                                                        <a class="waves-attach">
+                                                            <b class="pull-left">Marhun Value (MYR)</b><b style="color:black" class="pull-right" id="totaPrice"></b>
+                                                            <input name="totaPrice_1" id="totaPrice_1" type="hidden" value="0.00" />
+                                                        </a>
+                                                    </li>
+                                                    <li style="border-top:solid 1px; border-top-color:#cccccc">
+                                                        <a class="waves-attach">
+                                                            <b class="pull-left">Collateral Rate (%)</b><b style="color:black" class="form-group-amber pull-right">
+                                                            <select class="form-control" name="col_rate" id="col_rate" onchange="tukarRate();">
+                                                                <option value="50">
+                                                                    50
+                                                                </option>
+                                                                <option value="55">
+                                                                    55
+                                                                </option>
+                                                                <option value="60">
+                                                                    60
+                                                                </option>
+                                                                <option value="65">
+                                                                    65
+                                                                </option>
+                                                                <option value="70">
+                                                                    70
+                                                                </option>
+                                                                <option value="75">
+                                                                    75
+                                                                </option>
+                                                                <option value="80">
+                                                                    80
+                                                                </option>
+                                                            </select>
+                                                            </b>
+                                                        </a>
+                                                    </li>
+                                                    <li style="border-top:solid 1px; border-top-color:#cccccc">
+                                                        <a class="waves-attach">
+                                                            <b class="pull-left">Collateral Cash / DinarPal E-Dinar (MYR)</b><b style="color:black" class="pull-right" id="col_nilai"></b>
+                                                            <input name="col_nilai_1" id="col_nilai_1" type="hidden" value="0.00" />
+                                                        </a>
+                                                    </li>
+                                                    <li style="border-top:solid 1px; border-top-color:#cccccc">
+                                                        <a class="waves-attach">
+                                                            <b class="pull-left">Safe Keeping Fee (MYR)</b><b style="color:black" class="pull-right" id="safe_keeping_fee">0.55</b>
+                                                        </a>
+                                                    </li>
+                                                    <li style="border-top:solid 1px; border-top-color:#cccccc">
+                                                        <a class="waves-attach">
+                                                            <b class="pull-left">Keeping Period (Month)</b><b style="color:black" class="form-group-amber pull-right">
+                                                            <select class="form-control" name="keeping_period" id="keeping_period" onchange="tukarRate();">
+                                                                <option value="1">
+                                                                    1
+                                                                </option>
+                                                                <option value="2">
+                                                                    2
+                                                                </option>
+                                                                <option value="3">
+                                                                    3
+                                                                </option>
+                                                                <option value="4">
+                                                                    4
+                                                                </option>
+                                                                <option value="5">
+                                                                    5
+                                                                </option>
+                                                                <option value="6">
+                                                                    6
+                                                                </option>
+                                                            </select>
+                                                            </b>
+                                                        </a>
+                                                    </li>
+                                                    <li style="border-top:solid 1px; border-top-color:#cccccc">
+                                                        <a class="waves-attach">
+                                                            <b class="pull-left">Keeping Period Fee (MYR)</b><b style="color:black" id="keeping_period_fee" class="pull-right">0.55</b>
+                                                            <input name="keeping_period_fee_1" id="keeping_period_fee_1" type="hidden" value="0.00" />
+                                                        </a>
+                                                    </li>
+                                                   
+
+                                                </ul>
+                                    </div>
+
+                                    
+                                    <br>
+                                    <div class="col-md-12">
+
+                                        <table cellspacing="0" cellpadding="10">
+                                            <tr>
+                                                <td>Notes:</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marhun Value = Weight * Rate</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Safe Keeping Fee = [ Marhun * (Safe Keeping Fee Rate / 100) * (Total Days / 365) * 12 ]</td>
+                                            </tr>
+
+                                        </table>
+
+                                    </div>
+                                    <br>
+                                    <button style="color:black" class="btn blue btn-block waves-attach waves-button" onclick="location.reload()">Back</button>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+
+    <!-- js -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="material/js/base.min.js"></script>
+    <!-- js for this project -->
+    <script src="material/js/project.min.js"></script>
+
+
+    <script>
+        $("#content").toggle("slide", { direction: "right" }, 500);
+
+                    function addCommas(n) {
+                        var rx = /(\d+)(\d{3})/;
+                        return String(n).replace(/^\d+/, function (w) {
+                            while (rx.test(w)) {
+                                w = w.replace(rx, '$1,$2');
+                            }
+                            return w;
+                        });
+                    }
+
+                    tukarRate();
+                    function calculate(n) {
+                        var it = document.getElementById('it' + n).value;
+                        var w = document.getElementById('w' + n).value;
+                        var pu = document.getElementById('pu' + n).value;
+                        var price = 0.00;
+                        var nilai = 0.00;
+                        $.post(c.connect + "calculator.php",
+                        {
+                            it: it,
+                            pu: pu
+
+                        }).done(function (data) {
+                            d = $.parseJSON(data);
+
+                            price = d.price / d.rate;
+                            
+                            nilai = price * w; 
+                            document.getElementById('price' + n).value = addCommas(price.toFixed(2));
+                            document.getElementById('price_' + n).value = price.toFixed(2);
+                            document.getElementById('nilai_' + n).value = nilai.toFixed(2);
+                            var totaPrice = 0.00;
+                            for (i = 1; i <= 5; i++) {
+                                totaPrice += parseFloat(document.getElementById('nilai_' + i).value);
+                            }
+                            document.getElementById('totaPrice').innerHTML = addCommas(totaPrice.toFixed(2));
+                            document.getElementById('totaPrice_1').value = totaPrice.toFixed(2);
+                            var col_rate = document.getElementById('col_rate').value;
+                            var col_nilai = totaPrice * (col_rate * 1.0 / 100);
+                            document.getElementById('col_nilai').innerHTML = addCommas(col_nilai.toFixed(2));
+                            var keeping_period = document.getElementById('keeping_period').value;
+                            var safe_keeping_fee = document.getElementById('safe_keeping_fee').innerHTML;
+                            var keeping_period_fee = totaPrice * (safe_keeping_fee / 100) * keeping_period;
+                            document.getElementById('keeping_period_fee').innerHTML = addCommas(keeping_period_fee.toFixed(2));
+                        });
+                    }
+                    function tukarRate() {
+                        var totaPrice = 0.00;
+                        for (i = 1; i <= 5; i++) {
+                            totaPrice += parseFloat(document.getElementById('nilai_' + i).value);
+                        }
+                        document.getElementById('totaPrice').innerHTML = addCommas(totaPrice.toFixed(2));
+                        document.getElementById('totaPrice_1').value = totaPrice.toFixed(2);
+                        var col_rate = document.getElementById('col_rate').value;
+                        var col_nilai = totaPrice * (col_rate * 1.0 / 100);
+                        document.getElementById('col_nilai').innerHTML = addCommas(col_nilai.toFixed(2));
+                        var keeping_period = document.getElementById('keeping_period').value;
+                        var safe_keeping_fee = document.getElementById('safe_keeping_fee').innerHTML;
+                        var keeping_period_fee = totaPrice * (safe_keeping_fee / 100) * keeping_period;
+                        document.getElementById('keeping_period_fee').innerHTML = addCommas(keeping_period_fee.toFixed(2));
+                    }
+                    function validateField(field) {
+                        if (field == '') {
+                            return false;
+                        }
+                        if (field == null) {
+                            return false;
+                        }
+                        if (field == 0) {
+                            return false;
+                        }
+                        return true;
+                    }
+
+
+              
+
+    </script>
+
+</body>
+</html>

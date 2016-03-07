@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>main</title>
+    <!-- css -->
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- css for this project -->
+    <link href="material/css/project.min.css" rel="stylesheet">
+    <link href="csss/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        #content {
+            display:none;
+        }
+    </style>
+</head>
+<body class="avoid-fout page-amber" style="font-family:Gisha">
+    
+
+    <header class="header header-transparent header-waterfall">
+        <ul class="nav nav-list pull-left">
+            <li>
+                <a data-toggle="menu" href="#menu">
+                    <img src="img/menu.png" width="25"/>
+                </a>
+            </li>
+        </ul>
+        &emsp;
+        <b class="header-affix-hide" data-offset-top="0" >
+            <a class="header-logo" href="home.html"><img src="assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+        </b>
+           
+        <ul class="nav nav-list pull-right">
+            <li>
+                <a data-toggle="menu" href="#profile">
+                    
+                    <span class="avatar"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <!--NAV menu-->
+    <nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+        <div class="menu-scroll">
+            <div class="menu-content">
+               <!--<a class="menu-logo" href="home2.html" style="background-color:#4ca64c">Deposit</a>--> 
+                
+                <ul class="nav">
+                    <li>
+                        <a class="waves-attach"  >Overview</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href = 'transaction.html'>Transaction</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnu.html">Rahnu</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="sendPayment.html">Send Payment</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Keep</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Sell-Buy</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Bid</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Merchant</a>
+                    </li>
+                   
+                </ul>
+                <hr>
+    
+            </div>
+        </div>
+    </nav>
+
+    <nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
+        <div class="menu-scroll">
+            <div class="menu-top">
+                <div class="menu-top-img">
+                    <img alt="John Smith" src="img/header.jpg">
+                </div>
+                <div class="menu-top-info">
+                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>Umar Mukhtar</a>
+                </div>
+                <div class="menu-top-info-sub">
+                    <small>Have a nice day Umar! ;)</small>
+                </div>
+            </div>
+            <div class="menu-content">
+                <ul class="nav" >
+                    <li>
+                        <a class="waves-attach" href="profile.html"><img src="img/profile.png" width="30"> &emsp;Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="email.html"><img src="img/email.png" width="30"> &emsp;E-mail</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="card.html"><img src="img/card.png" width="30"> &emsp;Card</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="bank.html"><img src="img/bank.png" width="30"> &emsp;Bank</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnuCalculator.html"><img src="img/calculator.png" width="30"> &emsp;Calculator</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="changePassword.html"><img src="img/changepass.png" width="30"> &emsp;Change Password</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="memberSearch.html"><img src="img/search.png" width="30"> &emsp;Member Search</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="login.html"><img src="img/logout2.png" width="25"> &emsp;  Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+
+    <header class="header header-amber"></header>
+    <div class="content" id="content">
+        <div class="container">
+            <div class="row">
+                <center><h3>Overview</h3></center><hr>
+                <div class="container">
+
+                   <!--floating button-->
+                    <div class="fbtn-container">
+                        <div class="fbtn-inner">
+                            <a class="fbtn fbtn-amber fbtn-lg" data-toggle="dropdown"><span class="fbtn-ori icon">add</span><span class="fbtn-sub icon">close</span></a>
+                            <div class="fbtn-dropdown">
+                                <a class="fbtn fbtn-lg"  href="deposit.html"><span class="fbtn-text">Deposit</span><span ><img src="img/depo.png" width="30"></span></a>
+                                <a class="fbtn fbtn-lg" href="withdrawal.html" ><span class="fbtn-text">Withdrawal</span><span ><img src="img/withdraw.png" width="30"></span></a>
+                                <a class="fbtn fbtn-lg" href="redeem.html" ><span class="fbtn-text">Redeem</span><span><img src="img/redeem.png" width="30"></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--tab-->
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="first-tab-amber">
+                            <center><b >Rahnu</b></center>
+							<div class="container" id="rahnu">
+							</div>
+                        </div>
+                        <div class="tab-pane fade" id="second-tab-amber">
+                            <center><b >Vault</b></center>
+							<div class="container" id="vault">
+							</div>
+                        </div>
+                        <div class="tab-pane fade" id="third-tab-amber">
+                            <center><b >E-Dinar & E-Dirham (MYR)</b></center>
+							<div class="container" id="dinar">
+							</div>
+                        </div>
+                        <div class="tab-pane fade" id="four-tab-amber">
+							<center><b >Latest Transaction</b></center>
+							<div class="container" id="trans">
+							</div>
+							<div class="container"><button style="color:black" class="btn btn-block waves-attach waves-button" type="button" onclick='location.href = "transaction.html"'>All transaction</button></div>
+                        </div>
+                    </div>
+                   
+
+
+                    <div class="footer">
+                        <div class="foot" >
+                            <nav class="tab-nav tab-nav-amber">
+                                <ul class="nav nav-justified" style="background-color:#e5e5e5; border-top: 1px solid;">
+                                    <li class="active">
+                                        <a class="waves-attach" data-toggle="tab" href="#first-tab-amber"><img src="assets/images/gold1.png" width="40"></a>
+                                    </li>
+                                    <li>
+                                        <a class="waves-attach" data-toggle="tab" href="#second-tab-amber"><img src="assets/images/calculators3.png" width="40" /></a>
+                                    </li>
+                                    <li>
+                                        <a class="waves-attach" data-toggle="tab" href="#third-tab-amber"><img src="assets/images/myr.png" width="40" /></a>
+                                    </li>
+                                    <li>
+                                        <a class="waves-attach" data-toggle="tab" href="#four-tab-amber"><img src="assets/images/activity.png" width="40" /></a>
+                                    </li>
+                                   
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                    <!--end tab-->
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+  
+
+    <!-- js -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/network.js"></script>
+    
+    <script src="material/js/base.min.js"></script>
+    <!-- js for this project -->
+    <script src="material/js/project.min.js"></script>
+
+
+    <script type="text/javascript">
+        
+
+        $("#content").toggle("fade", 500);
+
+        $(document).ready(function () {
+
+            checkNetwork();
+                if (!IS_ONLINE || window.navigator.offLine) {
+                    alert('No internet connection.');
+                } else {
+                   
+                   $.get(c.connect + "OvRahnu.php", function (data) {
+                               $("#rahnu").html(data);
+                   
+                           });
+		            $.get(c.connect + "OvVault.php", function (data) {
+                               $("#vault").html(data);
+                   
+                           });
+		            $.get(c.connect + "OvDinar.php", function (data) {
+                               $("#dinar").html(data);
+                   
+                           });	   
+	               $.post(c.connect + "transaction.php",
+                           {
+                               sum: 'sum'
+                  
+                           }).done(function (data) {
+                               $("#trans").html(data);
+                   
+                           });
+                }
+            
+});
+    </script>
+
+</body>
+</html>

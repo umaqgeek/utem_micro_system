@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>main</title>
+    <!-- css -->
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- css for this project -->
+    <link href="material/css/project.min.css" rel="stylesheet">
+    <link href="csss/font-awesome.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="css/swiper.css">
+    <link href="material/css/base.css" rel="stylesheet">
+   
+</head>
+<body class="avoid-fout page-amber" style="font-family:Gisha; background-image:url('assets/images/polygon12.png'); background-size:cover">
+    <div class="avoid-fout-indicator avoid-fout-indicator-fixed">
+        <div class="progress-circular progress-circular-center progress-circular-amber">
+            <div class="progress-circular-wrapper">
+                <div class="progress-circular-inner">
+                    <div class="progress-circular-left">
+                        <div class="progress-circular-spinner"></div>
+                    </div>
+                    <div class="progress-circular-gap"></div>
+                    <div class="progress-circular-right">
+                        <div class="progress-circular-spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header header-transparent header-waterfall">
+        <ul class="nav nav-list pull-left">
+            <li>
+                <a data-toggle="menu" href="#menu">
+                    <img src="img/menu.png" width="25"/>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="header-affix-hide" data-offset-top="0" >
+            <a class="header-logo"><img src="assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+        </div>
+           
+        <ul class="nav nav-list pull-right">
+            <li>
+                <a data-toggle="menu" href="#profile">
+                    <span class="access-hide">Welcome!</span>
+                    <span class="avatar"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <!--NAV menu-->
+    <nav aria-hidden="true" class="menu" id="menu" tabindex="-1">
+        <div class="menu-scroll">
+            <div class="menu-content">
+                <a class="menu-logo" href="home2.html" style="background-color:#4ca64c">Deposit</a>
+                <a class="menu-logo" href="home2.html" style="background-color:#5ACDCD">Widrawal</a>
+                <a class="menu-logo" href="home2.html" style="background-color:#ffc107">Redeem</a>
+                <ul class="nav">
+                    <li>
+                        <a class="waves-attach" href="home.html">Overview</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Transaction</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnu.html">Rahnu</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Send Payment</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Keep</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Sell-Buy</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Bid</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="#">Merchant</a>
+                    </li>
+                   
+                </ul>
+                <hr>
+    
+            </div>
+        </div>
+    </nav>
+
+    <nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
+        <div class="menu-scroll">
+            <div class="menu-top">
+                <div class="menu-top-img">
+                    <img alt="John Smith" src="img/header.jpg">
+                </div>
+                <div class="menu-top-info">
+                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left;"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>Umar Mukhtar</a>
+                </div>
+                <div class="menu-top-info-sub">
+                    <small>Have a nice day Umar! ;)</small>
+                </div>
+            </div>
+            <div class="menu-content">
+                <ul class="nav" >
+                    <li>
+                        <a class="waves-attach" href="profile.html"><img src="img/profile.png" width="30"> &emsp;Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="email.html"><img src="img/email.png" width="30"> &emsp;E-mail</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="Card.html"><img src="img/card.png" width="30"> &emsp;Card</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="Bank.html"><img src="img/bank.png" width="30"> &emsp;Bank</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnuCalculator.html"><img src="img/calculator.png" width="30"> &emsp;Calculator</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="changePassword.html"><img src="img/changepass.png" width="30"> &emsp;Change Password</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="memberSearch.html"><img src="img/search.png" width="30"> &emsp;Member Search</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="login.html"><img src="img/logout2.png" width="25"> &emsp;  Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+	<header class="header header-amber"></header>
+		<div class="content" style="background:url(imagess/bg/redeem2.jpg); ">
+			<div class="container" >
+				<div class="row">
+        
+	<div class="col-md-12">
+
+            <center><h2 style="color:orange;">E-Point Reward</h2></center>
+	  <table  class="table table-striped" align="center" width="900px" style="background-image:url(imagess/bg/redeem1.png); background-size:cover;border-radius:15px; overflow:hidden; " >
+		  <tbody>
+                <tr>
+                <td align="center"><img src="assets/uploads/rewards/beg_laptop1.png" alt="" width="100" height="100" /></td>
+                </tr>
+                 <tr align="center" valign="top">
+											      <td><table class="table">
+											        <tr>
+											          <td>Item Name</td>
+											          <td>:</td>
+											          <td>Laptop Beg Case</td>
+										            </tr>
+											        <tr>
+											          <td>DinarPal Points</td>
+											          <td>:</td>
+											          <td>700.00</td>
+										            </tr>
+											        <tr style="color:#0C0">
+											          <td>DinarPal Points Balance</td>
+											          <td>:</td>
+											          <td>10,000.00</td>
+										            </tr>
+											        </table></td>
+                                                    </tr>
+											        <tr align="center" valign="top">
+											      <td height="50"><button type="button"  data-toggle="modal" style="color:white; margin-bottom:5px" class="btn btn-block waves-attach waves-button">Redeem</button></td>
+                </tr>
+                  
+          </tbody>
+                	
+        </table>
+        <table class="table table-striped" align="center" width="900px" style="background-image:url(imagess/bg/redeem1.png); background-size:cover;border-radius:15px; overflow:hidden; ">
+				<tbody>
+                <tr>
+                <td align="center"><img src="assets/uploads/rewards/tv1.png" alt="" width="100" height="100" /></td>
+                </tr>
+                 <tr align="center" valign="top">
+											      <td><table class="table">
+											        <tr>
+											          <td>Item Name</td>
+											          <td>:</td>
+											          <td>LCD TV</td>
+										            </tr>
+											        <tr>
+											          <td>DinarPal Points</td>
+											          <td>:</td>
+											          <td>20,000.00</td>
+										            </tr>
+											        <tr style="color:#F00">
+											          <td>DinarPal Points Balance</td>
+											          <td>:</td>
+											          <td>10,000.00</td>
+										            </tr>
+											        </table></td>
+                                                    </tr>
+											        <tr align="center" valign="top">
+											      <td><button type="button" data-toggle="modal"style="color:white;" class="btn btn-block waves-attach waves-button">Redeem</button></td>
+                </tr>
+                                 
+                </tbody>
+              </table>
+                <table class="table table-striped" align="center" width="900px" style="background-image:url(imagess/bg/redeem1.png); background-size:cover;border-radius:15px; overflow:hidden; ">
+				<tbody>
+                <tr>
+                <td align="center"><img src="assets/uploads/rewards/wallet1.png" alt="" width="100" height="100" /></td>
+                </tr>
+                 <tr align="center" valign="top">
+											      <td><table class="table">
+											        <tr>
+											          <td>Item Name</td>
+											          <td>:</td>
+											          <td>Wallet</td>
+										            </tr>
+											        <tr>
+											          <td>DinarPal Points</td>
+											          <td>:</td>
+											          <td>200.00</td>
+										            </tr>
+											        <tr style="color:#0C0">
+											          <td>DinarPal Points Balance</td>
+											          <td>:</td>
+											          <td>10,000.00</td>
+										            </tr>
+											        </table></td>
+                  </tr>
+											        <tr align="center" valign="top">
+											      <td><button type="button" data-toggle="modal"style="color:white;" class="btn btn-block waves-attach waves-button">Redeem</button></td>
+                </tr>
+                                 
+                </tbody>
+              </table>
+              	<BR>
+											<BR>
+                  </div>
+		  </div> 
+
+</div>
+									<div class="tab-pane fade" id="4th-tab-amber">
+										<center><b style="color:orange; font-size:30px">Step 4</b></center>
+									
+										<div class="row">
+											<a name="anchor1"></a>
+										
+											<div class="col-md-8 table-responsive" style="margin-left:-5px;">
+											<table class="table" style="background-color:transparent; color:yellow">
+											  <tr>
+											  <td align="right">Collateral Rate</td>
+												<td>:</td>
+												<td colspan="3">
+													<div class="form-group-amber form-group-label">
+														<div class="row">
+															<div class="col-md-10 col-md-push-1">
+															<select name="col_rate" id="col_rate" style="color:white" class="form-control">
+															  <option style="color:black" value="50">50%</option>
+															  <option style="color:black" value="55">55%</option>
+															  <option style="color:black" value="60">60%</option>
+															  <option style="color:black" value="65">65%</option>
+															  <option style="color:black" value="70">70%</option>
+															  <option style="color:black" value="75">75%</option>
+															  <option style="color:black" value="80" selected="selected">80%</option>
+															</select>
+															</div>
+														</div>
+													</div>
+												</td>
+											  </tr>
+											  <tr>
+												<td width="116" align="right">Ar-Rahnu Fee</td>
+												<td width="5"><strong>:</strong></td>
+												<td width="55" align="left"> 0.00 MYR</td>
+												<td width="64" align="right"></td>
+												<td width="225" align="right">&nbsp;</td>
+											  </tr>
+											  <tr>
+												<td align="right">Verification Fee</td>
+												<td><strong>:</strong></td>
+												<td align="left"> 0.00 MYR</td>
+												<td align="right"></td>
+												<td align="right">&nbsp;</td>
+											  </tr>
+											  <tr>
+												<td align="right">Courier Handling Fee</td>
+												<td><strong>:</strong></td>
+												<td align="left"> 0.00 MYR</td>
+												<td align="right"></td>
+												<td align="right">&nbsp;</td>
+											  </tr>
+											  <tr>
+												<td align="right"><strong>ACCEPTED E-DINAR</strong></td>
+												<td><strong>:</strong></td>
+												<td ><strong> &nbsp; MYR  <div id="grand_total_x" style="float:left;"> 0.00 </div></strong></td>
+												<td align="right" ><strong></strong></td>
+												<td align="right">&nbsp;</td>
+											  </tr>
+											  <tr>
+												<td align="right">Storage Location</td>
+												<td>:</td>
+												<td colspan="3">
+													<div class="form-group-amber form-group-label">
+														<div class="row">
+															<div class="col-md-10 col-md-push-1">
+															<select name="sl_id" style="color:white" class="form-control">
+																<option style="color:black" value="1">Malaysia - Melaka - Melaka International Trade Centre</option>
+																<option style="color:black" value="2">Brunei - Bandar Seri Begawan - Jalan Kucing</option>
+																<option style="color:black" value="3">UAE - Dubai - Gold Souk</option>
+															</select>
+															</div>
+														</div>
+													</div>	
+												</td>
+											  </tr>
+											  <!--<tr>
+												<td>
+													 <button type="submit" class="button " data-toggle="modal" style="margin-right:10px;" >Proceed</button>
+												</td>
+												<td >&nbsp;</td>
+												<td colspan="3">&nbsp;</td>
+												</tr> -->
+											</table>
+														<div class="col-sm-offset-3 col-sm-10" style="margin-right:50px;">
+														<Br>
+														   <center><button type="submit" class="button " data-toggle="modal" >Proceed</button>&nbsp; &nbsp; &nbsp;
+														   <button type="submit" class="waves-attach " href="#" data-toggle="tab" style="margin-left:-10px;">Finish</button></center>
+														</div> 
+											
+
+											<BR>
+
+											</div>
+										
+											
+										</div>
+										
+									</div>
+							</div>
+			
+							<!--<div class="footer">
+								<div class="foot" >
+									<nav class="tab-nav tab-nav-amber">
+										<ul class="nav nav-justified" style="background-color:#e5e5e5; border-top: 1px solid; border-top-color:red;">
+											<li class="active">
+												<a class="waves-attach" data-toggle="tab" href="#1st-tab-amber">Step 1</a>
+											</li>
+											<li>
+												<a class="waves-attach" data-toggle="tab" href="#2nd-tab-amber">Step 2</a>
+											</li>
+											<li>
+												<a class="waves-attach" data-toggle="tab" href="#3rd-tab-amber">Step 3</a>
+											</li>
+											<li>
+												<a class="waves-attach" data-toggle="tab" href="#4th-tab-amber">Step 4</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>-->
+						  <!--end tab-->
+							
+						</div>
+				</div>
+			</div>
+		</div>
+							
+			
+
+    <!--Footer-->
+
+   
+
+    <!-- js -->
+    <script src="js/jquery-1.11.1.js"></script>
+
+    <script src="material/js/base.min.js"></script>
+    <!-- js for this project -->
+    <script src="material/js/project.min.js"></script>
+
+
+    <script type="text/javascript">
+
+$(document).ready(function() {
+
+
+});
+    </script>
+
+</body>
+</html>

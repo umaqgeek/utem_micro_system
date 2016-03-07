@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>main</title>
+    <!-- css -->
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- css for this project -->
+    <link href="material/css/project.min.css" rel="stylesheet">
+    <link href="csss/font-awesome.min.css" rel="stylesheet">
+    <style>
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+<body class="avoid-fout page-amber" style="font-family:Gisha">
+   
+
+    <header class="header header-transparent header-waterfall">
+        <ul class="nav nav-list pull-left">
+            <li>
+                <a onclick="back()">
+                    <img src="img/left.png" width="25" />
+                </a>
+            </li>
+        </ul>
+
+        <div class="header-affix-hide" data-offset-top="0">
+            <a class="header-logo" href="home.html"><img src="assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+        </div>
+
+        <ul class="nav nav-list pull-right">
+            <li>
+                <a data-toggle="menu" href="#profile">
+                    <span class="access-hide">Welcome!</span>
+                    <span class="avatar"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
+        <div class="menu-scroll">
+            <div class="menu-top">
+                <div class="menu-top-img">
+                    <img alt="John Smith" src="img/header.jpg">
+                </div>
+                <div class="menu-top-info">
+                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>Umar Mukhtar</a>
+                </div>
+                <div class="menu-top-info-sub">
+                    <small>Have a nice day Umar! ;)</small>
+                </div>
+            </div>
+            <div class="menu-content">
+                <ul class="nav">
+                    <li>
+                        <a class="waves-attach" href="profile.html"><img src="img/profile.png" width="30"> &nbsp;Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="email.html"><img src="img/email.png" width="30"> &nbsp;E-mail</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="card.html"><img src="img/card.png" width="30"> &nbsp;Card</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach active" href="bank.html"><img src="img/bank.png" width="30"> &nbsp;Bank</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnuCalculator.html"><img src="img/calculator.png" width="30"> &nbsp;Calculator</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="changePassword.html"><img src="img/changepass.png" width="30"> &nbsp;Change Password</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="memberSearch.html"><img src="img/search.png" width="30"> &nbsp;Member Search</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="login.html"><img src="img/logout2.png" width="25"> &nbsp;  Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+
+    <header class="header header-amber"></header>
+    <div class="content" id="content">
+        <div class="container">
+            <div class="row">
+                <center><h3>My bank</h3></center><hr>
+                <div class="container">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="first-tab-amber">
+
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <button style="color:black;" class="btn btn-block waves-attach waves-button" data-toggle="tab" href="#second-tab-amber">Add Bank</button><BR>
+
+                                    <div id="banktab"></div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                       <!--ADD BANK FORM-->
+
+                        <div class="tab-pane fade" id="second-tab-amber">
+                            
+                            <center><h4>Add New Bank Account</h4></center>
+                            
+                            <form class="form-horizontal" role="form" method="post" id="fmBank">
+                                <div class="row">
+                                    <div class="col-md-8">
+
+                                        <div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Bank&nbsp;Name</strong></label>
+                                            <div class="col-sm-9">
+                                                <input name="ba_name" type="text" class="form-control" placeholder="Bank Name" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Bank&nbsp;Address</strong></label>
+                                            <div class="col-sm-9">
+                                                <input name="ba_address" type="text" class="form-control" placeholder="Bank Address" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Bank&nbsp;City</strong></label>
+                                            <div class="col-sm-9">
+                                                <input name="ba_city" type="text" class="form-control" placeholder="Bank City" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Bank&nbsp;Zip&nbsp;Code</strong></label>
+                                            <div class="col-sm-4">
+                                                <input name="ba_zipcode" type="text" class="form-control" placeholder="Bank Zip Code" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Bank&nbsp;Country</strong></label>
+                                            <div class="col-sm-9">
+                                                <select name="co_id" class="form-control">
+                                                    <option value="1">Algeria</option>
+                                                    <option value="2">Australia</option>
+                                                    <option value="3">Malaysia</option>
+                                                    <option value="4">United State of America</option>
+                                                    <option value="5">China</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Bank&nbsp;State&nbsp;Name</strong></label>
+                                            <div class="col-sm-4">
+                                                <input name="ba_state" type="text" class="form-control" placeholder="Bank State Name" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Bank&nbsp;Phone</strong></label>
+                                            <div class="col-sm-4">
+                                                <input name="ba_phone" type="text" class="form-control" placeholder="Bank Phone" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Account&nbsp;Holder's&nbsp;Name</strong></label>
+                                            <div class="col-sm-9">
+                                                <input name="ba_holdername" type="text" class="form-control" placeholder="Account Holder's Name" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Account&nbsp;Number</strong></label>
+                                            <div class="col-sm-9">
+                                                <input name="ba_accountnumber" type="text" class="form-control" placeholder="Account Number" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Account&nbsp;Type</strong></label>
+                                            <div class="col-sm-9">
+                                                <select name="bat_id" class="form-control">
+                                                    <option value="1">Personal Checking</option>
+                                                    <option value="2">Personal Saving</option>
+                                                    <option value="3">Business Checking</option>
+                                                    <option value="4">Business Saving</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>9 DigitsRouting&nbsp;Number</strong></label>
+                                            <div class="col-sm-9">
+                                                <input name="ba_digitrouting" type="text" class="form-control" placeholder="9 Digits Routing Number" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>S.W.I.F.T.&nbsp;Code</strong></label>
+                                            <div class="col-sm-9">
+                                                <input name="ba_swiftcode" type="text" class="form-control" placeholder="S.W.I.F.T. Code" />
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Additional&nbsp;Information</strong></label>
+                                            <div class="col-sm-9">
+                                                <textarea name="ba_addinfo" class="form-control" placeholder="Additional Information"></textarea>
+                                            </div>
+                                        </div>
+										<div class="form-group">
+                                            <label for="storageLocation" class="col-sm-3 control-label"><strong>Bank's&nbsp;Category</strong></label>
+                                            <div class="col-sm-9">
+                                                <select name="bc_id" class="form-control">
+                                                    <option value="1">Malaysia Favorite Bank</option>
+                                                    <option value="2">International Favorite Bank</option>
+                                                </select>
+                                            </div>
+                                        </div><br>
+                                        <button type="submit" class="btn btn-block waves-attach waves-button">Save</button><br>
+                                        <button class="btn blue btn-block waves-attach waves-button" data-toggle="tab" href="#first-tab-amber">Back</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    
+    <div aria-hidden="true" class="modal fade" id="ModMsg" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-inner">
+                    <p><strong id="msg"></strong></p>
+                </div>
+                <div class="modal-footer">
+                    <p class="text-right"><button class="btn btn-flat btn-brand waves-attach" data-dismiss="modal" type="button" data-toggle="tab" onclick="window.location.reload()">OK</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="material/js/base.min.js"></script>
+    <!-- js for this project -->
+    <script src="material/js/project.min.js"></script>
+
+
+    <script>
+                $(document).ready(function () {
+
+                    $.get(c.connect + "bank.php", function (data) {
+
+                        $("#banktab").html(data);
+                        $("#content").toggle("slide", { direction: "right" }, 500);
+
+                    });
+
+                    $("#fmBank").submit(function () {
+                        $.post(c.connect + 'addBank.php', $('#fmBank').serialize(), function (data) {
+                          
+                            $("#msg").html(data);
+                               $("#ModMsg").modal();
+                              
+                               
+                            });
+                       
+                        return false;
+                    });
+                });
+               
+    </script>
+
+</body>
+</html>

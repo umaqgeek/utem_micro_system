@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>main</title>
+    <!-- css -->
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- css for this project -->
+    <link href="material/css/project.min.css" rel="stylesheet">
+    <link href="csss/font-awesome.min.css" rel="stylesheet">
+    <style>
+        #slide {
+            display: none;
+        }
+    </style>
+</head>
+<body class="avoid-fout page-amber" style="background-image:url('img/drkblue.jpg'); font-family:Gisha" >
+    
+
+    <header class="header header-transparent header-waterfall">
+        <ul class="nav nav-list pull-left">
+            <li>
+                <a onclick="back()">
+					<img src="img/left.png" width="25" />
+				</a>
+            </li>
+        </ul>
+
+        <b class="header-affix-hide" data-offset-top="0">
+            <a class="header-logo" href="home.html"><img src="assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+        </b>
+
+        <ul class="nav nav-list pull-right">
+            <li>
+                <a data-toggle="menu" href="#profile">
+
+                    <span class="avatar"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+
+    <nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
+        <div class="menu-scroll" >
+            <div class="menu-top">
+                <div class="menu-top-img">
+                    <img alt="John Smith" src="img/header.jpg">
+                </div>
+                <div class="menu-top-info">
+                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>Umar Mukhtar</a>
+                </div>
+                <div class="menu-top-info-sub">
+                    <small>Have a nice day Umar! ;)</small>
+                </div>
+            </div>
+            <div class="menu-content">
+                <ul class="nav">
+                    <li>
+                        <a class="waves-attach" href="profile.html"><img src="img/profile.png" width="30"> &emsp;Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="email.html"><img src="img/email.png" width="30"> &emsp;E-mail</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="card.html"><img src="img/card.png" width="30"> &emsp;Card</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="bank.html"><img src="img/bank.png" width="30"> &emsp;Bank</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnuCalculator.html"><img src="img/calculator.png" width="30"> &emsp;Calculator</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="changePassword.html"><img src="img/changepass.png" width="30"> &emsp;Change Password</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="memberSearch.html"><img src="img/search.png" width="30"> &emsp;Member Search</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="login.html"><img src="img/logout2.png" width="25"> &emsp;  Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+
+    <header class="header header-amber"></header>
+    <div class="content" id="slide" >
+
+        <div class="container">
+
+            <div class="row">
+				<center><h3 style="color:white">Payment Gram</h3></center>
+                <div class="container" >
+
+                    <div class="tab-content">
+						<div class="tab-pane fade active in" id="first-tab-amber">
+						<div class="form-group-amber form-group-label">
+							<div class="row">
+								<div class="col-md-10 col-md-push-1">
+									<label class="floating-label" for="login-password" style="color:white">Send&nbsp;to&nbsp;(receiver's&nbsp;username)</label>
+									<input class="form-control" id="to" name="to" type="text" style="color:white">
+								</div>
+							</div>
+						</div>          
+                        <div class="form-group-amber form-group-label">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <label class="floating-label" for="login-username" style="color:white">Payment&nbsp;Type</label>
+                                    <select class="form-control" id="PayType"  style="color:white" required>
+                                        <option style="color:black" value="Goods">Goods</option>
+                                        <option style="color:black" value="Services">Services</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="form-group-amber form-group-label">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <label class="floating-label" for="login-username" style="color:white">Select&nbsp;an&nbsp;Account</label>
+                                    <select class="form-control" id="AccType"  style="color:white" required>
+                                        <option style="color:black" value="E-Gold Reserved">E-Gold Reserved</option>                                  
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-group-amber form-group-label">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <label class="floating-label" for="login-password" style="color:white">Notes</label>
+                                    <input class="form-control" id="note" name="note" type="text" style="color:white" >
+                                </div>
+                            </div>
+                        </div>
+						<div class="form-group">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <button id= "nextBtn" style="color:black" class="btn btn-block waves-attach waves-button" data-toggle="tab" href="#second-tab-amber">Next</button><BR>
+                                </div>
+                            </div>
+                        </div>
+						</div>
+						
+						<!-- ITEM LIST ///////////////////////////////////////////////////////////////-->
+                       <div class="tab-pane fade" id="second-tab-amber"> 
+							<div id="item"></div>
+							
+							<div class="form-group">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <button style="color:black; width:150px" class="btn  blue waves-attach waves-button pull-left" data-toggle="tab"  href="#first-tab-amber"><b>Back</b></button>
+                                    <button id="proBtn" style="color:black; width:150px" class="btn  waves-attach waves-button pull-right"><b>Review</b></button>
+                                </div>
+                            </div>
+                        </div>
+						</div>	
+
+					</div>
+				</div>
+			</div>
+			
+			<!--MODAL confirm-->
+                    <div aria-hidden="true" class="modal fade" id="modConfirm" role="dialog" tabindex="-1">
+                        <div class="modal-dialog modal-xs">
+                            <div class="modal-content">
+                                <div class="modal-heading">
+                                    <a class="modal-close" data-dismiss="modal">&times;</a>
+                                    <h2 class="modal-title">Transaction Confirmation</h2>
+                                </div>
+                                <div class="modal-inner">
+                                    <p id="msg">
+                                        Send to: <b id="user" ></b> <br>
+                                        Payment type: <b id="pt"></b><br>
+                                        Account type: <b id="at"></b> <br>
+                                        Note: <b id="not"></b> <br>
+										Item(s):<div id="it"></div> <br><br>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <p class="text-right" >
+                                        <button style="color:black" id="copyBtn" class="btn blue btn-flat btn-brand waves-attach" data-dismiss="modal">Back</button>
+                                        <button style="color:black" class="btn btn-flat btn-brand waves-attach" data-dismiss="modal" type="button" id="conBtn" >Confirm</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+			<!--MODAL SUCCESS-->
+                    <div aria-hidden="true" class="modal fade" id="modSuc" role="dialog" tabindex="-1">
+                        <div class="modal-dialog modal-xs">
+                            <div class="modal-content">
+                                <div class="modal-heading" id="head">
+                                    <a class="modal-close" data-dismiss="modal">&times;</a>
+                                    <h2 class="modal-title">Transaction Success!</h2>
+                                </div>
+                                <div class="modal-inner">
+                                    <p id="err">
+                                        <strong>Transaction summary.</strong><br><br>
+										
+                                        Send to: <b id="user2" ></b> <br>
+                                        Payment type: <b id="pt2"></b><br>
+                                        Account type: <b id="at2"></b> <br>
+                                        Note: <b id="not2"></b> <br>
+										Item(s):<div id="it2"></div> <br><br>
+                                    
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <p class="text-right">
+                                        <button style="color:black" class="btn btn-flat btn-brand waves-attach" data-dismiss="modal" type="button" onclick="location.reload()">OK</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+		</div>
+	</div>
+            
+    <!--Footer-->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="material/js/base.min.js"></script>
+    <!-- js for this project -->
+    <script src="material/js/project.min.js"></script>
+    <script src="clipboard/clipboard.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $("#slide").toggle("slide", { direction: "right" }, 400);
+
+
+        $(document).ready(function () {
+
+		$.get(c.connect + "item.php", function (data) {
+                               $("#item").html(data);
+        });	   
+		
+		
+			var x;
+			var to;
+			var pt;
+            var at;
+            var not;
+
+            $("#nextBtn").click(function () {
+				if ($("#to").val() == "") {
+                    $("#err").html("<b style='color:red'>Please insert receiver's username.<b>");
+                    $("#head").html("");
+                    $("#modSuc").modal();
+                }
+            });
+
+            $("#proBtn").click(function () {
+                 x = JSON.parse(localStorage["item_id"]);
+				 to = $("#to").val();
+                 pt = $("#PayType").val();
+                 at = $("#AccType").val();
+                 not = $("#note").val();
+               
+			    $.post(c.connect + "item.php",
+                {
+                    selectedItems: x,
+                    select: 'select'
+
+                }).done(function (data) {
+                    $("#it").html(data);
+                    $("#it2").html(data);
+                });
+				
+				
+                $("#user").html(to);
+                $("#at").html(at);
+                $("#pt").html(pt);
+                $("#not").html(not);
+                $("#modConfirm").modal();
+                return false;
+            });
+
+
+            $("#conBtn").click(function () {
+            $.post(c.connect + "sendGram.php",
+                {
+                    items: x,
+                    to: to,
+                    pt: pt,
+                    at: at,
+                    not: not
+
+                }).done(function (data) {
+				
+                    if (data == 'true') {
+                        $("#user2").html(to);
+						$("#at2").html(at);
+						$("#pt2").html(pt);
+						$("#not2").html(not);
+                        $("#modSuc").modal();
+                    } else {
+                        $("#err").html(data);
+                        $("#head").html("");
+                        $("#it2").html("");
+                        $("#modSuc").modal();
+                    };
+                });
+            });
+
+           
+         
+        });
+    </script>
+
+</body>
+</html>

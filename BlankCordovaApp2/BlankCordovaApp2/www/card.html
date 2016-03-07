@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>main</title>
+    <!-- css -->
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- css for this project -->
+    <link href="material/css/project.min.css" rel="stylesheet">
+    <link href="csss/font-awesome.min.css" rel="stylesheet">
+    <style>
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+<body class="avoid-fout page-amber" style="font-family:Gisha">
+    
+
+    <header class="header header-transparent header-waterfall">
+        <ul class="nav nav-list pull-left">
+            <li>
+                <a onclick="back()">
+                    <img src="img/left.png" width="25" />
+                </a>
+            </li>
+        </ul>
+
+        <div class="header-affix-hide" data-offset-top="0">
+            <a class="header-logo" href="home.html"><img src="assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+        </div>
+
+        <ul class="nav nav-list pull-right">
+            <li>
+                <a data-toggle="menu" href="#profile">
+                    <span class="access-hide">Welcome!</span>
+                    <span class="avatar"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+
+    <nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
+        <div class="menu-scroll">
+            <div class="menu-top">
+                <div class="menu-top-img">
+                    <img alt="John Smith" src="img/header.jpg">
+                </div>
+                <div class="menu-top-info">
+                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>Umar Mukhtar</a>
+                </div>
+                <div class="menu-top-info-sub">
+                    <small>Have a nice day Umar! ;)</small>
+                </div>
+            </div>
+            <div class="menu-content">
+                <ul class="nav">
+                    <li>
+                        <a class="waves-attach" href="profile.html"><img src="img/profile.png" width="30"> &nbsp;Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="email.html"><img src="img/email.png" width="30"> &nbsp;E-mail</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="card.html"><img src="img/card.png" width="30"> &nbsp;Card</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="bank.html"><img src="img/bank.png" width="30"> &nbsp;Bank</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnuCalculator.html"><img src="img/calculator.png" width="30"> &nbsp;Calculator</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="changePassword.html"><img src="img/changepass.png" width="30"> &nbsp;Change Password</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="memberSearch.html"><img src="img/search.png" width="30"> &nbsp;Member Search</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="login.html"><img src="img/logout2.png" width="25"> &nbsp;  Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+
+    <header class="header header-amber"></header>
+    <div class="content" id="content">
+        <div class="container">
+            <div class="row">
+                <center><h3>My Card</h3></center><hr>
+                <div class="container">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="first-tab-amber">
+
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <button style="color:black;" class="btn btn-block waves-attach waves-button" data-toggle="tab" href="#second-tab-amber">Add Card</button><BR>
+
+                                    <div id="cardtab"></div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--ADD card FORM-->
+
+                        <div class="tab-pane fade" id="second-tab-amber">
+
+                            <center><h4>Add Debit/Credit Card</h4></center>
+
+                            <form class="form-horizontal" role="form" method="post" id="FmCard">
+                                <input type="hidden" name="me_id" value="1" />
+                                <input type="hidden" name="ca_status" value="1" />
+                                <div class="row">
+                                    <div class="col-md-8">
+
+                                        <div class="form-group">
+                                            <label for="firstname" class="col-sm-3 control-label"><strong>Card&nbsp;Type</strong></label>
+                                            <div class="col-sm-9">
+                                                <select name="ct_id" class="form-control">
+                                                    <option value="1">Visa</option>
+                                                    <option value="2">Master Card</option>
+                                                    <option value="3">American Express</option>
+                                                    <option value="4">Discover</option>
+                                                    <option value="5">asdasd</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="firstname" class="col-sm-3 control-label"><strong>Name&nbsp;on&nbsp;Card</strong></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" name="ca_name" placeholder="Name on Card" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstname" class="col-sm-3 control-label"><strong>Card&nbsp;Number</strong></label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" name="ca_number" placeholder="Card Number" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstname" class="col-sm-3 control-label"><strong>CVN&nbsp;Number</strong></label>
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" name="ca_cvnnumber" placeholder="CVN Number" />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="firstname" class="col-sm-3 control-label"><strong>Expire&nbsp;Date&nbsp;(MM/YYYY)</strong></label>
+                                            <div class="col-sm-4">
+                                                <select name="ca_expiredmonth" class="form-control">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <select name="ca_expiredyear" class="form-control">
+                                                    <option value="2015">2015</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2021">2021</option>
+                                                    <option value="2022">2022</option>
+                                                    <option value="2023">2023</option>
+                                                    <option value="2024">2024</option>
+                                                    <option value="2025">2025</option>
+                                                    <option value="2026">2026</option>
+                                                    <option value="2027">2027</option>
+                                                    <option value="2028">2028</option>
+                                                    <option value="2029">2029</option>
+                                                    <option value="2030">2030</option>
+                                                    <option value="2031">2031</option>
+                                                    <option value="2032">2032</option>
+                                                    <option value="2033">2033</option>
+                                                    <option value="2034">2034</option>
+                                                    <option value="2035">2035</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-10 col-sm-10"><br>
+                                                <button type="submit" class="btn btn-block waves-attach waves-button">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+
+    <div aria-hidden="true" class="modal fade" id="ModMsg" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-inner">
+                    <p><strong id="msg"></strong></p>
+                </div>
+                <div class="modal-footer">
+                    <p class="text-right"><button class="btn btn-flat btn-brand waves-attach" data-dismiss="modal" type="button" data-toggle="tab" href="card.html">OK</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="material/js/base.min.js"></script>
+    <!-- js for this project -->
+    <script src="material/js/project.min.js"></script>
+
+
+    <script>
+                $(document).ready(function () {
+
+                    $.get(c.connect + "card.php", function (data) {
+
+                        $("#cardtab").html(data);
+                        $("#content").toggle("slide", { direction: "right" }, 500);
+
+                    });
+
+                    $("#FmCard").submit(function () {
+                        $.post(c.connect + 'addCard.php', $('#FmCard').serialize(), function (data) {
+                            $("#msg").html(data);
+                            $("#ModMsg").modal();
+                        });
+                        return false;
+                    });
+
+                    
+                });
+
+    </script>
+
+</body>
+</html>

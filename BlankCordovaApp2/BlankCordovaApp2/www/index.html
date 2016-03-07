@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.css">
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+.butDiv{
+	position: absolute;
+	width:100%;
+	height:30px;
+	z-index: 1;
+	margin-bottom:0px;
+	}
+.button {
+	position: absolute;
+	left: 10%;
+	bottom: 30px;
+	width: 130px;
+	height: 30px;
+	z-index: 1;
+}
+.button1 {
+	position: absolute;
+	right: 10%;
+	bottom: 30px;
+	width: 130px;
+	height: 30px;
+	z-index: 1;
+}
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(img/gold.jpg); background-size:100%; color:white;font-family:'gisha';">
+
+                <p style="font-size:large; margin-bottom:250px">
+                    <b style="font-size:20px">Payments in Dinar  <span> & </span> Dirham</b><br><br>
+                    Gold gram transfer and silver gram transfer. Feel the excitement.
+                </p>
+            </div>
+            
+                <div class="swiper-slide" style="background-image: url(img/halal.jpg); background-size:100%; color:white;font-family:'gisha';">
+
+                    <p style="font-size:large; margin-bottom:250px">
+                        <b style="font-size:20px">Open for HALAL business</b><br><br>
+                        Now you can purchase on our HALAL marketplace or your favorite merchant store using your DinarPal account.
+                    </p>
+            </div>
+            <div class="swiper-slide" style="background-image: url(img/23.jpg); background-size:100%; color:white;font-family:'gisha';">
+
+                <p style="font-size:large; margin-bottom:200px">
+                    <b style="font-size:20px">Surah Al-Imran: Verse 75</b><br><br>
+                    "Among the People of the Book, there are people who, if thou trust him with a weight of treasure, will return it (properly) to you, and some of them who, if though trust store 1 dinar already"
+                </p>
+
+            </div>
+                
+
+        </div>
+        <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    
+        <div class="button">
+
+            <button style="color:black; float:left" class="btn btn-block waves-attach waves-button" type="button" onClick="location.href='login.html'">Sign In</button>
+        </div>
+        <div class="button1">
+            <button style="color:black; float:right" class="btn blue btn-block waves-attach waves-button" type="button" onClick="location.href='register.html'">Create Account</button>
+        </div>
+
+
+
+
+        </div>
+    
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery-1.11.1.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+
+    </script>
+</body>
+</html>

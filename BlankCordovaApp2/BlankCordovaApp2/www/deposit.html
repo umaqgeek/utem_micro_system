@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>main</title>
+    <!-- css -->
+    <link href="material/css/base.css" rel="stylesheet">
+    <!-- css for this project -->
+    <link href="material/css/project.min.css" rel="stylesheet">
+    <link href="csss/font-awesome.min.css" rel="stylesheet">
+    <style>
+        #slide {
+            display: none;
+        }
+    </style>
+</head>
+<body class="avoid-fout page-amber" style="background-image:url('img/blackbg.png'); font-family:Gisha" >
+    
+
+    <header class="header header-transparent header-waterfall">
+        <ul class="nav nav-list pull-left">
+            <li>
+                <a onclick="back()">
+                    <img src="img/left.png" width="25" />
+                </a>
+            </li>
+        </ul>
+
+        <b class="header-affix-hide" data-offset-top="0">
+            <a class="header-logo" href="home.html"><img src="assets/images/DP-Logo-small.png" width="106" height="29" alt="DinarPal" /></a>
+        </b>
+
+        <ul class="nav nav-list pull-right">
+            <li>
+                <a data-toggle="menu" href="#profile">
+
+                    <span class="avatar"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    
+    <nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
+        <div class="menu-scroll">
+            <div class="menu-top">
+                <div class="menu-top-img">
+                    <img alt="John Smith" src="img/header.jpg">
+                </div>
+                <div class="menu-top-info">
+                    <a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="material/images/users/avatar-001.jpg"></span>Umar Mukhtar</a>
+                </div>
+                <div class="menu-top-info-sub">
+                    <small>Have a nice day Umar! ;)</small>
+                </div>
+            </div>
+            <div class="menu-content">
+                <ul class="nav">
+                    <li>
+                        <a class="waves-attach" href="profile.html"><img src="img/profile.png" width="30"> &emsp;Profile</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="email.html"><img src="img/email.png" width="30"> &emsp;E-mail</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="card.html"><img src="img/card.png" width="30"> &emsp;Card</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="bank.html"><img src="img/bank.png" width="30"> &emsp;Bank</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="rahnuCalculator.html"><img src="img/calculator.png" width="30"> &emsp;Calculator</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="changePassword.html"><img src="img/changepass.png" width="30"> &emsp;Change Password</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="memberSearch.html"><img src="img/search.png" width="30"> &emsp;Member Search</a>
+                    </li>
+                    <li>
+                        <a class="waves-attach" href="login.html"><img src="img/logout2.png" width="25"> &emsp;  Logout</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--END NAV-->
+
+
+    <header class="header header-amber"></header>
+    <div class="content" id="slide" >
+
+        <div class="container">
+
+            <div class="row">
+                <center><h3 style="color:white">Deposit</h3></center><hr>
+                <div class="container" >
+
+                    
+                        <div class="form-group-amber form-group-label">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <label class="floating-label" for="login-username" style="color:white">Transfer&nbsp;type</label>
+                                    <input class="form-control" id="ttype" name="ttype" type="text" style="color:white" value="Bank Transfer" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-amber form-group-label">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <label class="floating-label" for="login-username" style="color:white">Account&nbsp;type</label>
+                                    <select class="form-control" id="acType"  style="color:white" required>
+                                        <option style="color:black" value="E-Dinar">E-Dinar</option>
+                                        <option style="color:black" value="E-Dirham">E-Dirham</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-amber form-group-label">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <label class="floating-label" for="login-username" style="color:white" required>Amount</label>
+                                    <input class="form-control" id="amount" type="number" style="color:white" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group-amber form-group-label">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <label class="floating-label" for="login-password" style="color:white">Notes</label>
+                                    <input class="form-control" id="note" name="note" type="text" style="color:white" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-10 col-md-push-1">
+                                    <button id="proBtn" style="color:black" class="btn btn-block waves-attach waves-button" data-toggle="modal">Proceed</button><BR>
+                                </div>
+                            </div>
+                        </div>
+
+                    
+                    <!--MODAL CONFIRMATION-->
+                    <div aria-hidden="true" class="modal fade" id="modConfirm" role="dialog" tabindex="-1">
+                        <div class="modal-dialog modal-xs">
+                            <div class="modal-content">
+                                <div class="modal-heading">
+                                    <a class="modal-close" data-dismiss="modal">&times;</a>
+                                    <h2 class="modal-title">Deposit Summary</h2>
+                                </div>
+                                <div class="modal-inner">
+                                    <p>Transfer type: <b id="tt"></b><br>
+                                    To account: <b id="at"></b><br>
+                                    Deposit amount: MYR <b id="am"></b> <br>
+                                    Notes: <b id="not"></b>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <p class="text-right" style="color:black"><button style="color:black" class="btn blue btn-flat btn-brand waves-attach" data-dismiss="modal" type="button">Cancel</button>
+                                    <button id="conBtn" style="color:black" class="btn btn-flat btn-brand waves-attach" data-dismiss="modal" type="button">Confirm</button></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--MODAL SUCCESS-->
+                    <div aria-hidden="true" class="modal fade" id="modSuc" role="dialog" tabindex="-1">
+                        <div class="modal-dialog modal-xs">
+                            <div class="modal-content">
+                                <div class="modal-heading">
+                                    <a class="modal-close" data-dismiss="modal">&times;</a>
+                                    <h2 class="modal-title" id="head">Deposit Success!</h2>
+                                </div>
+                                <div class="modal-inner">
+                                    <p id="msg">
+                                        <strong>Alhamdulillah, your deposit request was successful.</strong><br><br>
+                                        Please bank in amount of: MYR <b id="ams"></b> <br><br>
+                                        To account: 554138008153 (Dinarpal Sdn Bhd). <br><br>
+                                        Your reference code is: <b id="ref"></b><br><b id="copymsg" style="color:green"></b><br><br>
+                                        *It will take 3-5 working days to process your deposit. Please be patient, thank you.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <p class="text-right" >
+                                        <button style="color:black" id="copyBtn" class="btn blue btn-flat btn-brand waves-attach">Copy REF code</button>
+                                        <button style="color:black" class="btn btn-flat btn-brand waves-attach" data-dismiss="modal" type="button" onclick="location.reload()">OK</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="material/js/base.min.js"></script>
+    <!-- js for this project -->
+    <script src="material/js/project.min.js"></script>
+    <script src="clipboard/clipboard.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $("#slide").toggle("slide", { direction: "right" }, 400);
+
+
+        $(document).ready(function () {
+
+            
+            var tt;
+            var at;
+            var am;
+            var not;
+
+            $("#proBtn").click(function () {
+                 tt = $("#ttype").val();
+                 at = $("#acType").val();
+                 am = $("#amount").val();
+                 not = $("#note").val();
+               
+                $("#am").html(am);
+                $("#tt").html(tt);
+                $("#at").html(at);
+                $("#not").html(not);
+
+                if ($("#amount").val() == "") {
+                    $("#msg").html("<b style='color:red'>Please insert valid amount.<b>");
+                    $("#head").html("");
+                    document.getElementById("copyBtn").style.visibility = "hidden";
+                    $("#modSuc").modal();
+                } else {
+
+                    $("#modConfirm").modal();
+                }
+
+                return false;
+            });
+
+
+            $("#conBtn").click(function () {
+            $.post(c.connect + "deposit.php",
+                {
+                    tt: tt,
+                    at: at,
+                    am: am,
+                    not: not
+
+                }).done(function (data) {
+                    data = $.parseJSON(data);
+                    
+                    if (data.res == 'true') {
+                        $("#ams").html(data.am);
+                        $("#ref").html(data.ref);
+                        $("#modSuc").modal();
+                    } else {
+                        $("#msg").html(data.res);
+                        $("#modSuc").modal();
+                    };
+                });
+            });
+
+            $("#copyBtn").click(function () {
+                clipboard.copy($("#ref").html()).then(function () {
+                    $("#copymsg").html('Reference code copied to clipboard');
+                }, function (err) {
+                    //document.getElementById("markup-dom-copy-result").textContent = err;
+                });
+
+            });
+
+         
+        });
+    </script>
+
+</body>
+</html>
